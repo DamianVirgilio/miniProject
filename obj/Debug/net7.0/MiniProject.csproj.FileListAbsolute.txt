@@ -1,0 +1,4 @@
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.AssemblyInfoInputs.cache
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.AssemblyInfo.cs
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.csproj.CoreCompileInputs.cache
