@@ -1,10 +1,11 @@
-﻿public class Program01
+﻿public class Program
 {
-    public void Main()
+    public static void Main()
     {
-        do
-        {
-            
-        } while (true);
+        Player p1 = Player("Damian");
+        System.Console.WriteLine(p1.Name);
+        System.Console.WriteLine(p1.Health);
+        System.Console.WriteLine(p1.Strength);
+        System.Console.WriteLine(p1.Medkit);
     }
 }
