@@ -23,7 +23,9 @@ class Weapons
         }
         else
         {
+            System.Console.WriteLine("---------------------");
             System.Console.WriteLine("You have no weapons. ");
+            System.Console.WriteLine("---------------------");
         }
     }
 }
