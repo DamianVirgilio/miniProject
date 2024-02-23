@@ -20,4 +20,9 @@ public class Player
     {
         return HealthPoints > 0;
     }
+
+    public void TakeDamage(int damage)
+    {
+        HealthPoints =- damage;
+    }
 }
