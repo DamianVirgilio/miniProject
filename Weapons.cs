@@ -11,21 +11,18 @@ class Weapons
 
     public void ShowWeapons()
     {
+        System.Console.WriteLine("---------------------");
         if (WeaponList.Count > 0)
         {
             foreach (Weapons weapon in WeaponList)
             {
-                System.Console.WriteLine("---------------------");
                 System.Console.WriteLine(weapon);
-                System.Console.WriteLine("---------------------");
-
             }
         }
         else
         {
-            System.Console.WriteLine("---------------------");
             System.Console.WriteLine("You have no weapons. ");
-            System.Console.WriteLine("---------------------");
         }
+        System.Console.WriteLine("---------------------");
     }
 }
