@@ -2,3 +2,13 @@
 /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.AssemblyInfoInputs.cache
 /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.AssemblyInfo.cs
 /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.csproj.CoreCompileInputs.cache
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.deps.json
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.runtimeconfig.json
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.dll
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.pdb
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.dll
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/refint/MiniProject.dll
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.pdb
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.genruntimeconfig.cache
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/ref/MiniProject.dll
