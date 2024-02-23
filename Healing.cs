@@ -16,6 +16,7 @@ public class healing
     public void ShowHealing()
     System.Console.WriteLine("---------------------");
     System.Console.WriteLine($"You have {Medkit} medkits");
+    System.Console.WriteLine($"You have {Bandage} bandages");
     System.Console.WriteLine("---------------------");
     
 
