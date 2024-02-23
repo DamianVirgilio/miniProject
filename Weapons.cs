@@ -15,7 +15,10 @@ class Weapons
         {
             foreach (Weapons weapon in WeaponList)
             {
+                System.Console.WriteLine("---------------------");
                 System.Console.WriteLine(weapon);
+                System.Console.WriteLine("---------------------");
+
             }
         }
         else
