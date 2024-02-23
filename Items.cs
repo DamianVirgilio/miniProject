@@ -9,9 +9,20 @@ public class Items
 
     public void ShowItems()
     {
-        foreach (string Item in ItemList)
+        System.Console.WriteLine("---------------------");
+
+        if (ItemList.Count > 0)
         {
-            System.Console.WriteLine(Item);
+            foreach (string Item in ItemList)
+            {
+                System.Console.WriteLine(Item);
+            }
         }
+        else
+        {
+            System.Console.WriteLine("You have no items");
+        }
+        System.Console.WriteLine("---------------------");
+
     }
 }
