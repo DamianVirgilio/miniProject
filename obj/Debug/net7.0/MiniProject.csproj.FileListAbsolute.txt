@@ -20,3 +20,13 @@ C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\ne
 /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.genruntimeconfig.cache
 /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/ref/MiniProject.dll
 >>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.dll
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\refint\MiniProject.dll
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.pdb
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.exe
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.deps.json
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.runtimeconfig.json
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.dll
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.pdb
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.genruntimeconfig.cache
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\ref\MiniProject.dll

@@ -2,13 +2,12 @@
 {
     public static void Main()
     {
-<<<<<<< HEAD
-        Player p1 = Player("Damian");
+
+        Player p1 = new Player("Damian");
         System.Console.WriteLine(p1.Name);
         System.Console.WriteLine(p1.Health);
         System.Console.WriteLine(p1.Strength);
         System.Console.WriteLine(p1.Medkit);
-=======
         do
         {
             Enemy enemy1 = Enemy.GetEnemy(1);
@@ -23,6 +22,5 @@
             System.Console.WriteLine(enemy5.NameEnemy);
             break;
         } while (true);
->>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b
     }
 }
