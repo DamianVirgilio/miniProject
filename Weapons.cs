@@ -9,7 +9,7 @@ class Weapons
         damage = _damage;
     }
 
-    ShowWeapons()
+    public void ShowWeapons()
     {
         if (WeaponList.Count > 0)
         {
