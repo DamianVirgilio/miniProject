@@ -7,6 +7,7 @@ public class Player
     public int Strength;
     public int Medkit = 0;
     public int Bandage = 0;
+    public int level = 1;
     
     public Player(string _name)
     {
