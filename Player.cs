@@ -5,6 +5,9 @@ public class Player
     public int MaxHealth;
     public int Health;
     public int Strength;
+    public int Medkit = 0;
+    public int Bandage = 0;
+    public int level = 1;
     
     public Player(string _name)
     {
@@ -35,16 +38,48 @@ public class Player
         Strength += AmountStrength;
     }
 
+     public void PickUpMed(int AmountOfMedkits)
+    {
+        Medkit += AmountOfMedkits;
+    }
+
+    public void PickUpBandaid(int AmountOfBandage)
+    {
+        Bandage += AmountOfBandage;
+    }
+
+    public void ShowHealing()
+    System.Console.WriteLine("---------------------");
+    System.Console.WriteLine($"You have {Medkit} medkits");
+    System.Console.WriteLine($"You have {Bandage} bandages");
+    System.Console.WriteLine("---------------------");
+
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
     {
         if (choice == ...) // voer string in voor medkit
         {
-            Health = MaxHealth;
+            if (Medkit > 0)
+            {
+                Health = MaxHealth;
+                Medkit =- 1
+            }
+            else 
+            {
+                System.Console.WriteLine("You do not have any medkits");
+            }
         }
         else if (choice == ...) // voer string voor bandage
         {
-            int healing = MaxHealth / 2;
-            Health += healing;
+            if (Bandage > 0)
+            {
+                int healing = MaxHealth / 2;
+                Health += healing;
+                Bandage =- 1
+            }
+            else 
+            {
+                System.Console.WriteLine("You do not have any Bandages");
+            }
         }
     }
 }
