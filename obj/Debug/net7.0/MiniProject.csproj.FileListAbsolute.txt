@@ -1,5 +1,22 @@
+<<<<<<< HEAD
 C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.AssemblyInfoInputs.cache
 C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.AssemblyInfo.cs
 C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.csproj.CoreCompileInputs.cache
 C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.sourcelink.json
+=======
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.AssemblyInfoInputs.cache
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.AssemblyInfo.cs
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.csproj.CoreCompileInputs.cache
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.deps.json
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.runtimeconfig.json
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.dll
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/bin/Debug/net7.0/MiniProject.pdb
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.dll
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/refint/MiniProject.dll
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.pdb
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/MiniProject.genruntimeconfig.cache
+/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/Debug/net7.0/ref/MiniProject.dll
+>>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b

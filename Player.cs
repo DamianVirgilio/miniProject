@@ -19,12 +19,12 @@ public class Player
 
     public bool IsAlive()
     {
-        return HealthPoints > 0;
+        return Health > 0;
     }
 
     public void TakeDamage(int damage)
     {
-        HealthPoints =- damage;
+        Health =- damage;
     }
 
     public void HealthUpgrade(int AmountHealth)
@@ -49,32 +49,43 @@ public class Player
     }
 
     public void ShowHealing()
-    System.Console.WriteLine("---------------------");
-    System.Console.WriteLine($"You have {Medkit} medkits");
-    System.Console.WriteLine($"You have {Bandage} bandages");
-    System.Console.WriteLine("---------------------");
+    {
+        System.Console.WriteLine("---------------------");
+        System.Console.WriteLine($"You have {Medkit} medkits");
+        System.Console.WriteLine($"You have {Bandage} bandages");
+        System.Console.WriteLine("---------------------");
+    }
+    
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
     {
+<<<<<<< HEAD
         if (choice == "1") // voer string in voor medkit
+=======
+        if (choice == "Medkit") // voer string in voor medkit
+>>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b
         {
             if (Medkit > 0)
             {
                 Health = MaxHealth;
-                Medkit =- 1
+                Medkit =- 1;
             }
             else 
             {
                 System.Console.WriteLine("You do not have any medkits");
             }
         }
+<<<<<<< HEAD
         else if (choice == "2") // voer string voor bandage
+=======
+        else if (choice == "bandage") // voer string voor bandage
+>>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b
         {
             if (Bandage > 0)
             {
                 int healing = MaxHealth / 2;
                 Health += healing;
-                Bandage =- 1
+                Bandage =- 1;
             }
             else 
             {
