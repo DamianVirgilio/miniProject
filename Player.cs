@@ -59,11 +59,9 @@ public class Player
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
     {
-<<<<<<< HEAD
-        if (choice == "1") // voer string in voor medkit
-=======
+
         if (choice == "Medkit") // voer string in voor medkit
->>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b
+
         {
             if (Medkit > 0)
             {
@@ -75,11 +73,9 @@ public class Player
                 System.Console.WriteLine("You do not have any medkits");
             }
         }
-<<<<<<< HEAD
-        else if (choice == "2") // voer string voor bandage
-=======
+
         else if (choice == "bandage") // voer string voor bandage
->>>>>>> 5640e3c5900040e2b4bab7ae7ddac0015167114b
+
         {
             if (Bandage > 0)
             {
