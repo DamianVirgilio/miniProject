@@ -23,14 +23,14 @@ public static class World
         Location loc1Start = new Location(LOCATION_ID_LOC1, "Start");
         Location loc2      = new Location(LOCATION_ID_LOC2, "Empty location");
         Location loc3      = new Location(LOCATION_ID_LOC3, "Empty location");
-        Location loc4      = new Location(LOCATION_ID_LOC4, "Goal");
+        Location loc4      = new Location(LOCATION_ID_LOC4, "Empty location");
         Location loc5      = new Location(LOCATION_ID_LOC5, "Empty location");
         Location loc6      = new Location(LOCATION_ID_LOC6, "Empty location");
         Location loc7      = new Location(LOCATION_ID_LOC7, "Empty location");
         Location loc8      = new Location(LOCATION_ID_LOC8, "Empty location");
         Location loc9      = new Location(LOCATION_ID_LOC9, "Empty location");
         Location loc10     = new Location(LOCATION_ID_LOC10, "Empty location");
-        Location loc11     = new Location(LOCATION_ID_LOC11, "Empty location");
+        Location loc11     = new Location(LOCATION_ID_LOC11, "Goal");
 
 
         /* Map of locations
