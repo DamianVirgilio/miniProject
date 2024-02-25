@@ -8,6 +8,12 @@ public class Player
     public int Medkit = 0;
     public int Bandage = 0;
     public int level = 1;
+    public Location CurrentLocation;
+    public Player(Location currentLocation)
+    {
+        CurrentLocation = currentLocation;
+    }
+
     
     public Player(string _name)
     {
@@ -17,6 +23,16 @@ public class Player
         Strength = 10;
     }
 
+    public bool TryMoveTo(Location newLocation)
+    {
+        if (newLocation != null)
+        {
+            CurrentLocation = newLocation;
+            return true;
+        }
+        return false;
+    }
+}
     public bool IsAlive()
     {
         return Health > 0;
