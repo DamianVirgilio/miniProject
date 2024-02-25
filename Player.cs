@@ -9,12 +9,12 @@ public class Player
     public int Bandage = 0;
     public int level = 1;
     public Location CurrentLocation;
+
     public Player(Location currentLocation)
     {
         CurrentLocation = currentLocation;
     }
 
-    
     public Player(string _name)
     {
         Name = _name;
@@ -32,7 +32,6 @@ public class Player
         }
         return false;
     }
-}
     public bool IsAlive()
     {
         return Health > 0;
