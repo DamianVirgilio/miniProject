@@ -13,6 +13,38 @@ public static class World
     public const int LOCATION_ID_LOC9 = 9;
     public const int LOCATION_ID_LOC10 = 10;
     public const int LOCATION_ID_LOC11 = 11;
+    public const int LOCATION_ID_LOC12 = 12;
+    public const int LOCATION_ID_LOC13 = 13;
+    public const int LOCATION_ID_LOC14 = 14;
+    public const int LOCATION_ID_LOC15 = 15;
+    public const int LOCATION_ID_LOC16 = 16;
+    public const int LOCATION_ID_LOC17 = 17;
+    public const int LOCATION_ID_LOC18 = 18;
+    public const int LOCATION_ID_LOC19 = 19;
+    public const int LOCATION_ID_LOC20 = 20;
+    public const int LOCATION_ID_LOC21 = 21;
+    public const int LOCATION_ID_LOC22 = 22;
+    public const int LOCATION_ID_LOC23 = 23;
+    public const int LOCATION_ID_LOC24 = 24;
+    public const int LOCATION_ID_LOC25 = 25;
+    public const int LOCATION_ID_LOC26 = 26;
+    public const int LOCATION_ID_LOC27 = 27;
+    public const int LOCATION_ID_LOC28 = 28;
+    public const int LOCATION_ID_LOC29 = 29;
+    public const int LOCATION_ID_LOC30 = 30;
+    public const int LOCATION_ID_LOC31 = 31;
+    public const int LOCATION_ID_LOC32 = 32;
+    public const int LOCATION_ID_LOC33 = 33;
+    public const int LOCATION_ID_LOC34 = 34;
+    public const int LOCATION_ID_LOC35 = 35;
+    public const int LOCATION_ID_LOC36 = 36;
+    public const int LOCATION_ID_LOC37 = 37;
+    public const int LOCATION_ID_LOC38 = 38;
+    public const int LOCATION_ID_LOC39 = 39;
+    public const int LOCATION_ID_LOC40 = 40;
+    public const int LOCATION_ID_LOC41 = 41;
+    public const int LOCATION_ID_LOC42 = 42;
+
 
 
     static World() => PopulateLocations();
@@ -20,46 +52,50 @@ public static class World
     private static void PopulateLocations()
     {
         // Create each location
-        Location loc1 = new Location(LOCATION_ID_LOC1, "Home");
-        Location loc2      = new Location(LOCATION_ID_LOC2, "Zone 1");
-        Location loc3      = new Location(LOCATION_ID_LOC3, "Zone 1");
-        Location loc4      = new Location(LOCATION_ID_LOC4, "Zone 1");
-        Location loc5      = new Location(LOCATION_ID_LOC5, "Zone 1");
-        Location loc6      = new Location(LOCATION_ID_LOC6, "Zone 1");
-        Location loc7      = new Location(LOCATION_ID_LOC7, "Empty location");
-        Location loc8      = new Location(LOCATION_ID_LOC8, "Empty location");
-        Location loc9      = new Location(LOCATION_ID_LOC9, "Empty location");
-        Location loc10     = new Location(LOCATION_ID_LOC10, "Empty location");
-        Location loc11     = new Location(LOCATION_ID_LOC11, "Empty location");
-        Locations loc12    = new Location(LOCATION_ID_LOC12, "Empty location");
-        Location loc13     = new Location(LOCATION_ID_LOC13, "Empty location");
-        Location loc14     = new Location(LOCATION_ID_LOC14, "Empty location");
-        Location loc15     = new Location(LOCATION_ID_LOC15, "Empty location");
-        Location loc16     = new Location(LOCATION_ID_LOC16, "Empty location");
-        Location loc17     = new Location(LOCATION_ID_LOC17, "Empty location");
-        Location loc18     = new Location(LOCATION_ID_LOC18, "Empty location");
-        Location loc19     = new Location(LOCATION_ID_LOC19, "Zone 1");
-        Location loc20     = new Location(LOCATION_ID_LOC20, "Zone 1");
-        Location loc21     = new Location(LOCATION_ID_LOC21, "Zone 1");
-        Location loc22     = new Location(LOCATION_ID_LOC22, "Empty location");
-        Location loc23     = new Location(LOCATION_ID_LOC23, "Empty location");
-        Location loc24     = new Location(LOCATION_ID_LOC24, "Empty location");
-        Location loc25     = new Location(LOCATION_ID_LOC25, "Zone 1");
-        Location loc26     = new Location(LOCATION_ID_LOC26, "Empty location");
-        Location loc27     = new Location(LOCATION_ID_LOC27, "Empty location");
-        Location loc28     = new Location(LOCATION_ID_LOC28, "Empty location");
-        Location loc29     = new Location(LOCATION_ID_LOC29, "Empty location");
-        Location loc30     = new Location(LOCATION_ID_LOC30, "Empty location");
-        Location loc31     = new Location(LOCATION_ID_LOC31, "Empty location");
-        Location loc32     = new Location(LOCATION_ID_LOC32, "Empty location");
-        Location loc33     = new Location(LOCATION_ID_LOC33, "Empty location");
-        Location loc34     = new Location(LOCATION_ID_LOC34, "Empty location");
-        Location loc35     = new Location(LOCATION_ID_LOC35, "Empty location");
-        Location loc36     = new Location(LOCATION_ID_LOC36, "Empty location");
-        Location loc37     = new Location(LOCATION_ID_LOC37, "Empty location");
-        Location loc38     = new Location(LOCATION_ID_LOC38, "Empty location");
-        Location loc39     = new Location(LOCATION_ID_LOC39, "Empty location");
-        Location loc40     = new Location(LOCATION_ID_LOC40, "Empty location");
+        Location loc1      = new Location(LOCATION_ID_LOC1, "Home", "");
+        Location loc2      = new Location(LOCATION_ID_LOC2, "Zone 1", "");
+        Location loc3      = new Location(LOCATION_ID_LOC3, "Zone 1", "");
+        Location loc4      = new Location(LOCATION_ID_LOC4, "Zone 1", "");
+        Location loc5      = new Location(LOCATION_ID_LOC5, "Zone 1", "");
+        Location loc6      = new Location(LOCATION_ID_LOC6, "Zone 1", "");
+
+        Location loc7      = new Location(LOCATION_ID_LOC7, "Zone 2", "");
+        Location loc8      = new Location(LOCATION_ID_LOC8, "Zone 2", "");
+        Location loc9      = new Location(LOCATION_ID_LOC9, "Zone 2", "");
+        Location loc10     = new Location(LOCATION_ID_LOC10, "Zone 2", "");
+        Location loc11     = new Location(LOCATION_ID_LOC11, "Zone 2", "");
+        Locations loc12    = new Location(LOCATION_ID_LOC12, "Zone 3", "");
+        Location loc13     = new Location(LOCATION_ID_LOC13, "Zone 3", "");
+        Location loc14     = new Location(LOCATION_ID_LOC14, "Zone 3", "");
+        Location loc15     = new Location(LOCATION_ID_LOC15, "Zone 3", "");
+        Location loc16     = new Location(LOCATION_ID_LOC16, "Zone 3", "");
+        Location loc17     = new Location(LOCATION_ID_LOC17, "Zone 4", "");
+        Location loc18     = new Location(LOCATION_ID_LOC18, "Zone 4", "");
+        Location loc19     = new Location(LOCATION_ID_LOC19, "Zone 1", "");
+        Location loc20     = new Location(LOCATION_ID_LOC20, "Zone 1", "");
+        Location loc21     = new Location(LOCATION_ID_LOC21, "Zone 1", "");
+        Location loc22     = new Location(LOCATION_ID_LOC22, "Zone 3", "");
+        Location loc23     = new Location(LOCATION_ID_LOC23, "Zone 4", "");
+        Location loc24     = new Location(LOCATION_ID_LOC24, "Zone 2", "");
+        Location loc25     = new Location(LOCATION_ID_LOC25, "Zone 1", "");
+        Location loc26     = new Location(LOCATION_ID_LOC26, "Zone 2", "");
+        Location loc27     = new Location(LOCATION_ID_LOC27, "Zone 2", "");
+        Location loc28     = new Location(LOCATION_ID_LOC28, "Zone 2", "");
+        Location loc29     = new Location(LOCATION_ID_LOC29, "Zone 2", "");
+        Location loc30     = new Location(LOCATION_ID_LOC30, "Zone 2", "");
+        Location loc31     = new Location(LOCATION_ID_LOC31, "Zone 3", "");
+        Location loc32     = new Location(LOCATION_ID_LOC32, "Zone 1", "");
+        Location loc33     = new Location(LOCATION_ID_LOC33, "Zone 3", "");
+        Location loc34     = new Location(LOCATION_ID_LOC34, "Zone 4", "");
+        Location loc35     = new Location(LOCATION_ID_LOC35, "Zone 4", "");
+        Location loc36     = new Location(LOCATION_ID_LOC36, "Zone 4", "");
+        Location loc37     = new Location(LOCATION_ID_LOC37, "Zone 4", "");
+        Location loc38     = new Location(LOCATION_ID_LOC38, "Zone 4", "Goal");
+        Location loc39     = new Location(LOCATION_ID_LOC39, "Zone 4", "");
+        Location loc40     = new Location(LOCATION_ID_LOC40, "Zone 4", "");
+        Location loc41     = new Location(LOCATION_ID_LOC41, "Zone 4", "");
+        Location loc42     = new Location(LOCATION_ID_LOC42, "Zone 3", "");
+        
 
 
         /* Map of locations
@@ -71,7 +107,8 @@ public static class World
          */
 
         // Link the locations together
-        loc1.LocationToNorth = loc2;
+        loc1.LocationToNorth = loc2; // naar Zone 1
+        loc1.LocationToSouth = loc21;
 
         loc2.LocationToWest = loc3;
         loc2.LocationToEast = loc5;
@@ -79,13 +116,16 @@ public static class World
 
         loc3.LocationToEast = loc2;
         loc3.LocationToNorth = loc4;
+        loc3.LocationToWest = loc3;
 
-        loc4.LocationToSouth = loc3;
+        loc4.LocationToSouth = loc3; 
+        loc4.LocationToNorth = loc12; //naar Zone 3
 
         loc5.LocationToNorth = loc6;
         loc5.LocationToWest = loc2;
+        loc5.LocationToEast = loc11;
 
-        loc6.LocationToEast = loc7;
+        loc6.LocationToEast = loc7; // naar zone 2
         loc6.LocationToSouth = loc5;
 
         loc7.LocationToWest = loc6;
@@ -98,9 +138,117 @@ public static class World
         loc9.LocationToSouth = loc8;
 
         loc10.LocationToWest = loc7;
+        loc10.LocationToEast = loc30;
         loc10.LocationToSouth = loc11;
 
         loc11.LocationToNorth = loc10;
+        loc11.LocationToEast = loc5; // naar zone 1
+        loc11.LocationToSouth = loc24;
+        loc11.LocationToWest = loc29;
+
+        loc12.LocationToSouth = loc4; // naar zone 1
+        loc12.LocationToNorth = loc13;
+        loc12.LocationToWest = loc15;
+
+        loc13.LocationToSouth = loc12;
+        loc13.LocationToNorth = loc14;
+
+        loc14.LocationToSouth = loc13;
+        loc14.LocationToWest = loc31;
+
+        loc15.LocationToEast = loc12;
+        loc15.LocationToSouth = loc16;
+
+        loc16.LocationToSouth = loc17; // naar zone 4
+        loc16.LocationToNorth = loc15;
+        loc16.LocationToWest = loc42;
+
+        loc17.LocationToNorth = loc16;
+        loc17.LocationToSouth = loc18;
+
+        loc18.LocationToNorth = loc17;
+        loc18.LocationToEast = loc19; // naar zone 1
+
+        loc19.LocationToNorth = loc32;
+        loc19.LocationToWest = loc18; // naar zone 4
+        loc19.LocationToEast = loc20;
+
+        loc20.LocationToWest = loc19;
+        loc20.LocationToNorth = loc21;
+        loc20.LocationToEast = loc25;
+
+        loc21.LocationToNorth = loc1;
+        loc21.LocationToSouth = loc20;
+
+        loc22.LocationToNorth = loc33;
+        loc22.LocationToSouth = loc42;
+
+        loc23.LocationToEast = loc42;
+        loc23.LocationToWest = loc35;
+        loc23.LocationToSouth = loc34;
+
+        loc24.LocationToSouth = loc25;
+        loc24.LocationToEast = loc26;
+        loc24.LocationToNorth = loc11;
+
+        loc25.LocationToWest = loc20;
+        loc25.LocationToNorth = loc24; // naar zone 2
+
+        loc26.LocationToWest = loc24;
+        loc26.LocationToNorth = loc29;
+        loc26.LocationToEast = loc27;
+
+        loc27.LocationToWest = loc26;
+        loc27.LocationToNorth = loc28;
+        
+        loc28.LocationToSouth = loc27;
+        loc28.LocationToWest = loc29;
+        
+        loc29.LocationToSouth = loc26;
+        loc29.LocationToEast = loc28;
+        loc29.LocationToNorth = loc30;
+        loc29.LocationToWest = loc11;
+
+        loc30.LocationToSouth = loc29;
+        loc30.LocationToWest = loc10;
+
+        loc31.LocationToEast = loc14;
+        loc31.LocationToWest = loc33;
+
+        loc32.LocationToEast = loc3;
+        loc32.LocationToSouth = loc19;
+
+        loc33.LocationToEast = loc31;
+        loc33.LocationToSouth = loc22;
+
+        loc34.LocationToNorth = loc23;
+        loc34.LocationToEast = loc41;
+        loc34.LocationToSouth = loc36;
+
+        loc35.LocationToEast = loc23;
+        loc35.LocationToSouth = loc37;
+
+        loc36.LocationToNorth = loc34;
+        loc36.LocationToWest = loc38;
+        loc36.LocationToSouth = loc40;
+
+        loc37.LocationToNorth = loc35;
+
+        // loc38 is goal
+
+        loc39.LocationToNorth = loc41;
+        
+        loc40.LocationToNorth = loc36;
+
+        loc41.LocationToNorth = loc42;
+        loc41.LocationToWest = loc34;
+        loc41.LocationToSouth = loc39;
+
+        loc42.LocationToNorth = loc22;
+        loc42.LocationToWest = loc23; // naar zone 4
+        loc42.LocationToEast = loc16;
+        loc42.LocationToSouth = loc41; // naar zone 4
+
 
         Locations.Add(loc1);
         Locations.Add(loc2);
@@ -142,6 +290,7 @@ public static class World
         Locations.Add(loc38);
         Locations.Add(loc39);
         Locations.Add(loc40);
-
+        Locations.Add(Loc41);
+        Locations.Add(loc42);
     }
 }

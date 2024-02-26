@@ -9,14 +9,10 @@ public class Player
     public int Bandage = 0;
     public int level = 1;
     public Location CurrentLocation;
-    public Player(Location currentLocation)
+
+    public Player(string _name, Location currentLocation)
     {
         CurrentLocation = currentLocation;
-    }
-
-    
-    public Player(string _name)
-    {
         Name = _name;
         MaxHealth = 100;
         Health = MaxHealth;
@@ -32,7 +28,6 @@ public class Player
         }
         return false;
     }
-}
     public bool IsAlive()
     {
         return Health > 0;
@@ -71,7 +66,6 @@ public class Player
         System.Console.WriteLine($"You have {Bandage} bandages");
         System.Console.WriteLine("---------------------");
     }
-    
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
     {
