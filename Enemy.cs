@@ -38,4 +38,8 @@ public class Enemy
             return Enemies[randint];
         }
     }
+    public void TakeDamage(int damage)
+    {
+        Health =- damage;
+    }
 }
