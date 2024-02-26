@@ -2,6 +2,7 @@ public class Location
 {
     public int ID;
     public string Name;
+    public string Sector;
     public Location LocationToNorth;
     public Location LocationToEast;
     public Location LocationToSouth;

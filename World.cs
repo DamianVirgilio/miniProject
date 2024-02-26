@@ -63,7 +63,7 @@ public static class World
         Location loc9      = new Location(LOCATION_ID_LOC9, "Sector 2", "Boltcutter");
         Location loc10     = new Location(LOCATION_ID_LOC10, "Sector 2", "Bandage");
         Location loc11     = new Location(LOCATION_ID_LOC11, "Sector 2", "");
-        Locations loc12    = new Location(LOCATION_ID_LOC12, "Sector 3", "");
+        Location loc12    = new Location(LOCATION_ID_LOC12, "Sector 3", "");
         Location loc13     = new Location(LOCATION_ID_LOC13, "Sector 3", "B");
         Location loc14     = new Location(LOCATION_ID_LOC14, "Sector 3", "");
         Location loc15     = new Location(LOCATION_ID_LOC15, "Sector 3", "Riddle");
@@ -289,7 +289,7 @@ public static class World
         Locations.Add(loc38);
         Locations.Add(loc39);
         Locations.Add(loc40);
-        Locations.Add(Loc41);
+        Locations.Add(loc41);
         Locations.Add(loc42);
     }
 }
