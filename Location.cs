@@ -7,10 +7,10 @@ public class Location
     public Location LocationToSouth;
     public Location LocationToWest;
 
-    public Location(int id, string _zone, string name)
+    public Location(int id, string _sector, string name)
     {
         ID = id;
-        Zone = _zone;
+        Sector = _sector;
         Name = name;
     }
 
