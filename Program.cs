@@ -264,6 +264,20 @@ public class Program
         An EMPTY world with NO ONE AROUND.
         ");
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
+>>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
+>>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
+>>>>>>> bdb0d0a9a9d7f56248e6bc31e4d58a4cb5746b0c
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
@@ -355,9 +369,15 @@ public class Program
                     else
                     {
                         System.Console.WriteLine("That does not seem to be the awnser but the gods of the maze are kind enough to let you try again. ");
+<<<<<<< HEAD
                     };
                 }
 
+=======
+                    }
+                };
+            }
+>>>>>>> bdb0d0a9a9d7f56248e6bc31e4d58a4cb5746b0c
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Assault Rifle" && !check_assaultrifle)    
             {
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
@@ -405,6 +425,10 @@ public class Program
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             };
         }
+<<<<<<< HEAD
+
+        };
+=======
+>>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
         Console.WriteLine("You have arrived at the goal!");
-    }
-}
+ 
