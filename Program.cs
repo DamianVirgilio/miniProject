@@ -4,7 +4,6 @@
     {
         Console.WriteLine
         (@"
-        
         You open your eyes and realize that you're in a lift that speeds up and abruptly halts.
         A group of young men open the lift and one of them shoves you out.
         You start running but before getting too far you realize that the whole area is walled off.
@@ -25,11 +24,14 @@
 
         Later that day, a younger teenager named Chuck comes to help you set up a place to sleep.
         He also hands you a *WOODEN SPEAR*
+        ")
 
         [CHECK WHAT IS AVAILIBLE TO DO IN BASE]
 
         [WHEN EXITING BASE]
 
+        Console.WriteLine
+        (@"
         You and chuck head to the opening in the wall.
         2 Runners come out of the Wall and Chuck clarifies that one one except runners are allowed past the Walls.
 
@@ -40,15 +42,21 @@
 
         Later that day you declare that you want to be a runner.
         As soon as you say that you want to be a runner, one of the Gladers called Gally challenges you to spar.
+        ")
 
         [HAND COMBAT, YOU VS GALLY]
         [HE FIRST DEFEATS YOU AND TAUNTS YOU BUT THEN YOU FIND A WAY TO USE HIS OWN STRENGTH AGAINST HIM]
         [IMPORTANT; AT THE END OF THE FIGHT YOU FALL AND HIT YOUR HEAD]
 
+        Console.WriteLine
+        (@"
         You suddenly remember your NAME!
+        ")
 
         [INPUT NAME]
 
+        Console.WriteLine
+        (@"
         You scream that your name is [NAME]
         The Gladers celibrate and welcome you to the group, even Gally.
 
@@ -67,16 +75,22 @@
 
         You then head to the woods, but one of the Gladers; Ben SUDDENLY appears and JUMPS on you.
         He LOOKS SICK and JUMPS on you and attemps to CHOKE you!
+        ")
 
-        [Try to breate]
-        [Find a object near you to SLAM Ben's head to ESCAPE]
+        [TRY TO BREATHE]
+        [FIND AN OBJECT NEAR YOU TO SLAM BENS HEAD TO ESCAPE]
 
+        Console.WriteLine
+        (@"
         After slamming [OBJECT] on his head you run and try to escape.
         You RUN back to the Glade and get into a FIGHT with Ben!
+        ")
 
         [HAND COMBAT, YOU VS BEN]
-        [YOU GRAB YOUR SPEAR AND THROW IT STRAIGHT INTO BEN'S HEAD]
+        [YOU GRAB YOUR SPEAR AND THROW IT STRAIGHT INTO BENS HEAD]
 
+        Console.WriteLine
+        (@"
         All the gladers come and see Ben lying dead on the floor.
         You explain that Ben just ATTACKED YOU out of nowhere!
         Newt Comes and lifts up Ben's Shirt showing an infected wound.
@@ -107,6 +121,7 @@
         The two of you traverse the maze while carrying Alby!
 
         You notice vine on the walls so the two of you hoist Alby to hide him up in the vines.
+        ")
 
         [YOU ARE NOW IN THE MAZE AND NEED TO EXPLORE AND SURVIVE]
         
@@ -117,6 +132,8 @@
 
         [IN THE MORNING WHEN THE WALLS OPEN YOU HEAD BACK AND FIND A SLINGSHOT]
 
+        Console.WriteLine
+        (@"
         The next day the Maze opens and to everyone's surprise they see the two of you carrying Alby back.
         
         Minho announces: '[NAME] KILLLED A GRIEVER!'
@@ -126,7 +143,7 @@
         No one knows what happens when you kill a griever.
         Minho Announces that [NAME] is now a RUNNER!
 
-        Suddenly they hear something moving outside moving outside:
+        Suddenly they hear something moving outside:
         *THE BOX* is being lifted up outside out of the normal schedule!
 
         When they open it:
@@ -141,20 +158,25 @@
         You decide to gack to the Maze but you're stopped by Minho.
         You point out that no one has ever captured or killed a griever before.
         It would be in our best intrest to investigate the body.
+        ")
 
         [GO BACK INTO THE MAZE TO THE GRIEVERS BODY]
 
+        Console.WriteLine
+        (@"
         You look at the Griever and pull out the Grievers LEG which then comes apart.
         You find a *CILINDER-LIKE DEVICE* inside of it's leg.
         The device has a little light which is 'RED', the NUMBER '4' and a LABEl: 'WCKD'.
+        ")
 
-        You return to the Glade;
-
+        [RETURN TO THE GLADE]
         [RETURN TO BASE OR EXPLORE MAZE]
         [EXPLORE ALL SECTORS (1-4)]
 
         [CONTINUE STORY AFTER EXPLORING ALL SECTORS]
 
+        Console.WriteLine
+        (@"
         Minho and you look at the number on the *CILINDER-LIKE-DEVICE*
         You take a look at the NUMBER: '4'.
 
@@ -187,28 +209,8 @@
         He wants you find his parents and give it to them.
         You assure Chuck that you will find a way for all of you escape and hand him back his toy.
         You tell him that he will get the chance to give his toy to his parents himself.
-
-
-
-
-
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        ");
+        ")
         
         System.Console.WriteLine("What is your Name?");
         string Username = System.Console.ReadLine();
