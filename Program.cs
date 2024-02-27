@@ -292,7 +292,6 @@ public class Program
         string DayOrNight = "Day";
         while (player.CurrentLocation.Name != "Goal")
         {
-<<<<<<< HEAD
             Console.WriteLine("Current sector: " + player.CurrentLocation.Sector);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
@@ -301,15 +300,7 @@ public class Program
             {
                 System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && check_grieverfight)
-=======
-            Console.WriteLine("Current sector: " + player.CurrentLocation.Sector + "   Location: " + player.CurrentLocation.Name);
-            Console.WriteLine(player.CurrentLocation.Compass());
-            System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
-            string LocationMove = System.Console.ReadLine().ToUpper();
-
             if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
->>>>>>> 684041450844d99b600de48be280bc9854a15271
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
@@ -448,7 +439,6 @@ Handgun acquired!");
                 >= 20 and <= 24 => "Night",
                 _ => "Error"
             };
-            
         }
         System.Console.WriteLine("You have arrived at the goal!");
     }
