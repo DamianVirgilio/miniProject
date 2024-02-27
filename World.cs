@@ -313,13 +313,13 @@ public static class World
                 player.TakeDamage(enemy.Damage);
             }
         }
-        if (player.IsAlive && !enemy.IsAlive())
-        {
-            Console.WriteLine("Griever Defeated!");
-        }
-        else if (!player.IsAlive && enemy.IsAlive())
-        {
-            Console.WriteLine("You have been defeated!");
-        }
+        // if (player.IsAlive && !enemy.IsAlive())
+        // {
+        //     Console.WriteLine("Griever Defeated!");
+        // }
+        // else if (!player.IsAlive && enemy.IsAlive())
+        // {
+        //     Console.WriteLine("You have been defeated!");
+        // }
     }
 }

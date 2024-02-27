@@ -1,6 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "xffoy8AEqrG/zI7VVgUpEFrBohPMMstOVtgRgIViLmVdDXuloihG3DM6QK5bJsRrUxw0TjcvwTHSSI/xYKGdGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj",
@@ -10,11 +9,5 @@
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
   ],
-=======
-  "dgSpecHash": "HYcFqY3jA1LC7E9p367v+fpls2Flo5KrD7Pz0KB4t6HZIs1HABQVsxYCRUZH1udHXqETNCQOjIUDoVNEuBgnlQ==",
-  "success": true,
-  "projectFilePath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
-  "expectedPackageFiles": [],
->>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
   "logs": []
 }

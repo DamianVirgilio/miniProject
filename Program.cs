@@ -270,17 +270,7 @@ public class Program
         An EMPTY world with NO ONE AROUND.
         ");
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
->>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
->>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
@@ -345,7 +335,7 @@ public class Program
             // sectors 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Boltcutter" && !check_boltcutter)
             {
-                items = new Items("boltcutter");
+                Items Boltcutter = new Items("boltcutter");
                 check_boltcutter = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Riddle" && !check_riddle)
@@ -359,7 +349,7 @@ public class Program
                     Navigate wisely, don't make a mistake.
                     What am I?
                     ");
-                    string riddleAwnser = system.Console.ReadLine().ToUpper();
+                    string riddleAwnser = Console.ReadLine().ToUpper();
 
                     if (riddleAwnser == "MAZE")
                     {
@@ -379,7 +369,7 @@ public class Program
             {
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
                 Acquires Assault Rifle!");
-                player.equippedWeapon = new Weapons("Assault Rifle", 250);
+                player.EquippedWeapon = new Weapons("Assault Rifle", 250);
             }        
             
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "GrieverFight" && !check_grieverfight)
@@ -392,7 +382,7 @@ public class Program
                 System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
                 You take it because he does not need it anymore. ");
 
-                player.equippedWeapon = new Weapons("StunGun", 50);
+                player.EquippedWeapon = new Weapons("StunGun", 50);
 
             }
 
@@ -401,7 +391,7 @@ public class Program
                 System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
                 You wonder and ponder how it ended up there before you pick it up...
                 Handgun acquired!");
-                player.equippedWeapon = new Weapons("Handgun", 100);
+                player.EquippedWeapon = new Weapons("Handgun", 100);
             }
 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Medkit" && !check_medkit)
@@ -416,16 +406,15 @@ public class Program
                 player.PickUpBandaid(1);
             }
 
-            }
+            
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
         }
-<<<<<<< HEAD
 
-        };
-=======
->>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
-        Console.WriteLine("You have arrived at the goal!");
+    }
+
+    // Console.WriteLine("You have arrived at the goal!");
+}
  

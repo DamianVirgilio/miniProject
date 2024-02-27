@@ -9,6 +9,7 @@ public class Player
     public int Bandage = 0;
     public int level = 1;
     public Location CurrentLocation;
+    public Weapons EquippedWeapon;
 
     public Player(string _name, Location currentLocation)
     {
@@ -17,7 +18,6 @@ public class Player
         MaxHealth = 100;
         Health = MaxHealth;
         Strength = 10;
-        Weapons EquippedWeapon;
     }
 
     public bool TryMoveTo(Location newLocation)
@@ -83,8 +83,11 @@ public class Player
                 CurrentWeapon.ShowWeapons();
                 break;
             case "2":
+                ShowHealing();
+                break;
 
             default:
+                break;
         }
 
     }
