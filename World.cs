@@ -305,6 +305,29 @@ public static class World
         
         ");
 
-        player.Health = player.MaxHealth;
+      
+      player.Health = player.MaxHealth;
+    }
+    public void Combat(Player player, Enemy enemy)
+    {
+        while (player.IsAlive() && enemy.IsAlive())
+        {
+            int totalDamage = player.Strength + player.EquippedWeapon.damage;
+
+            enemy.TakeDamage(totalDamage);
+
+            if (enemy.IsAlive())
+            {
+                player.TakeDamage(enemy.Damage);
+            }
+        }
+        if (player.IsAlive && !enemy.IsAlive())
+        {
+            Console.WriteLine("Griever Defeated!")
+        }
+        else if (!player.IsAlive && enemy.IsAlive())
+        {
+            Console.WriteLine("You have been defeated!")
+        }
     }
 }
