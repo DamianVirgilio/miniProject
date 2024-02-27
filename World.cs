@@ -284,20 +284,36 @@ public static class World
         Locations.Add(loc42);
     }
 
-    public static void Home(Player player)
+    public static void Home()
     {
-        System.Console.WriteLine(@"
-        You are now back home safe luckily. 
-        You take some rest so you can go back in the maze the next day. 
-
-        ZZZzzZZZzzzzZZZzZzZzzzZ
-
-        You have woken up and feel rested!
-        Your HP is now full!
         
+        System.Console.WriteLine
+        (@" 
+        Choose what you want to do in your base:
+        1. Sleep
+        2. Exit and Continue
         ");
 
-      
-      player.Health = player.MaxHealth;
+        string playerinput = Console.ReadLine();
+
+        if (playerinput == "1")
+        {
+            Console.WriteLine
+            (@"
+            You are now back home safe luckily. 
+            You take some rest so you can go back in the maze the next day. 
+
+            ZZZzzZZZzzzzZZZzZzZzzzZ
+
+            You have woken up and feel rested!
+            Your HP is now full!
+            ");
+        }
+        else if (playerinput == "2")
+        {
+            Console.WriteLine(" You chose to continue...");
+        }
+       
+        player.Health = player.MaxHealth;
     }
 }

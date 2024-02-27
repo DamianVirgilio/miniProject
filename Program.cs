@@ -31,19 +31,7 @@ public class Program
 
         Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
 
-        //[ADD WOODEN SPEAR AND COMPASS]
-        
-        //[CHECK WHAT IS AVAILIBLE TO DO IN BASE]
-        
-        System.Console.WriteLine
-        (@" 
-        Choose what you want to do in your base:
-        1. Sleep
-        2. Use Crafting Bench
-        3. Exit and Continue
-        ");
-
-        //[WHEN EXITING BASE]
+        World.Home();
 
         Console.WriteLine
         (@"
@@ -59,12 +47,11 @@ public class Program
         As soon as you say that you want to be a runner, one of the Gladers called Gally challenges you to spar.
         ");
 
-        //[HAND COMBAT, YOU VS GALLY]
-        //[HE FIRST DEFEATS YOU AND TAUNTS YOU BUT THEN YOU FIND A WAY TO USE HIS OWN STRENGTH AGAINST HIM]
-        //[IMPORTANT: AT THE END OF THE FIGHT YOU FALL AND HIT YOUR HEAD]
+        Enemy.HandCombatGally();
 
         Console.WriteLine
         (@"
+        You wake up...
         You suddenly remember your NAME!
         ");
 
@@ -178,15 +165,15 @@ public class Program
         player.EquippedWeapon = SlingShot;
 
         Console.WriteLine
-        (@"
+        (@$"
         The next day the Maze opens and to everyone's surprise they see the two of you carrying Alby back.
         
-        Minho announces: '[NAME] KILLLED A GRIEVER!'
+        Minho announces: '{Username} KILLLED A GRIEVER!'
 
         All of you return to the Council Hall...
-        Gally Highlights: [NAME] killing a Griever could spell trouble for the others.
+        Gally Highlights: {Username} killing a Griever could spell trouble for the others.
         No one knows what happens when you kill a griever.
-        Minho Announces that [NAME] is now a RUNNER!
+        Minho Announces that {Username} is now a RUNNER!
 
         Suddenly they hear something moving outside:
         *THE BOX* is being lifted up outside out of the normal schedule!
@@ -195,7 +182,7 @@ public class Program
         They see a young Woman with a note in her hand.
         The Note says: 'SHE'S THE LAST ONE! EVER!'
 
-        Suddenly she WAKES up and GHASPS [NAME] before passing out.
+        Suddenly she WAKES up and GHASPS {Username} before passing out.
 
         Newt asks you if you know her but you SAY that you don't.
         The others get nervous with the idea of the box not returning anymore supplies.

@@ -46,4 +46,75 @@ public class Enemy
     {
         return Health > 0;
     }
+    public static void HandCombatGally()
+    {
+        string SparInput;
+        do
+        {
+            Console.WriteLine("type 'spar' if you want to fight Gally:");
+            SparInput = Console.ReadLine();
+
+            if (SparInput == "Spar" || SparInput == "spar")
+            {
+                Console.WriteLine("AND THE FIGHT STARTS!");
+                Console.WriteLine
+                (@"
+                Gally HITS almost ALL his punches on you
+                You struggle to hit him back...
+                He seems stronger than you anticipated!
+
+                Choose which tactic you want to use (1 or 2)!
+                1. Position yourself to apply JOINT LOCK!
+                2. Position yourself to EXECUTE a TRHOW!
+                ");
+                
+                string ChooseTactic = Console.ReadLine();
+
+                if (ChooseTactic == "1")
+                {
+                    Console.WriteLine
+                    (@"
+                    You find a way to USE his OWN STRENGTH AGAINST HIM!
+                    YOU SWIPE HIS LEGS AND MAKE HIM FALL!
+                    You RUN over to HIS BODY AND POSITION YOURSELF in a way to LOCK HIS ELBOW!
+                    
+                    -------------------------
+                    THE REFF STOPS THE FIGHT
+                    -------------------------
+
+                    He DECLARES THAT YOU ARE THE WINNER!
+
+                    SUDDENLY Gally RUNS over to you and HITS your HEAD!
+                    You FALL AND HIT YOUR HEAD ON THE GROUND!
+                    ");
+
+                }
+                else if (ChooseTactic == "2")
+                {
+                    Console.WriteLine
+                    (@"
+                    You find a way to USE his OWN STRENGTH AGAINST HIM!
+                    HE JUMPS ON TO YOU AND YOU THROW HIS BODY TO THE GROUND!
+                    YOU HIT HIM A FEW TIMES AND IT LOOKS LIKE HES ABOUT TO LOSE CONSIOUSNESS!
+
+                    -------------------------
+                    THE REFF STOPS THE FIGHT
+                    -------------------------
+
+                    HE DECLARES THAT YOU ARE THE WINNER!
+
+                    SUDDENLY Gally RUNS over to you and HITS your HEAD!
+                    You FALL AND HIT YOUR HEAD ON THE GROUND!
+                    ");
+                }
+
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Dont be a baby! Fight Gally to show him that you're capable of being a Runner!");
+            }
+        }
+        while (SparInput == "Spar" || SparInput == "spar");       
+    }
 }
