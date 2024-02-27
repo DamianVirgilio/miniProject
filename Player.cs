@@ -68,12 +68,12 @@ public class Player
         System.Console.WriteLine("---------------------");
     }
 
-    public void ShowChoices(Weapons CurrentWeapon)
+    public void ShowChoices(Weapons CurrentWeapon, int time)
     {
         System.Console.WriteLine(@"1. Equip Weapon
-                                   2. Heal yourself
-                                   3. Show Items
-                                   4. Continue the Maze");
+2. Heal yourself
+3. Look at watch
+4. Continue the Maze");
 
         string choice = Console.ReadLine();
 
@@ -82,8 +82,13 @@ public class Player
             case "1":
                 CurrentWeapon.ShowWeapons();
                 break;
+                
             case "2":
                 ShowHealing();
+                break;
+
+            case "3":
+                System.Console.WriteLine($"The time is {time}:00. ");
                 break;
 
             default:

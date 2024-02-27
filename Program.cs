@@ -275,6 +275,8 @@ public class Program
         // System.Console.WriteLine(enemy4.NameEnemy);
         // Enemy enemy5 = Enemy.GetEnemy(5);
         // System.Console.WriteLine(enemy5.NameEnemy);
+
+        List<string> passwordList = new List<string>();
         int time_count = 7;
         bool check_boltcutter = false; // gedaan
         bool check_bandage = false; // gedaan
@@ -290,29 +292,33 @@ public class Program
         bool check_shovel = false; // gedaan
         bool check_medkit = false; // gedaan
         string DayOrNight = "Day";
+
+
         while (player.CurrentLocation.Name != "Goal")
         {
-<<<<<<< HEAD
             Console.WriteLine("Current sector: " + player.CurrentLocation.Sector);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
+            if (LocationMove == "I")
+            {
+                player.ShowChoices(EquippedWeapon, time_count);
+            }
+
+            else if (LocationMove == "N" || LocationMove == "W" || LocationMove == "S" || LocationMove == "E")
+            {
+
             if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Home" && DayOrNight == "Night")
             {
                 System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && check_grieverfight)
-=======
-            Console.WriteLine("Current sector: " + player.CurrentLocation.Sector + "   Location: " + player.CurrentLocation.Name);
-            Console.WriteLine(player.CurrentLocation.Compass());
-            System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
-            string LocationMove = System.Console.ReadLine().ToUpper();
 
             if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
->>>>>>> 684041450844d99b600de48be280bc9854a15271
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                System.Console.WriteLine("You have opened the gate to sector 2. ");
             }
+
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight)
             {
                 System.Console.WriteLine("\nYou can't move to sector 2 yet\n");
@@ -320,6 +326,8 @@ public class Program
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 3" && check_boltcutter)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                System.Console.WriteLine(@"you are standing infront of the gate to sector 3. There is a very big padlock locking the gate
+Lucky you just found a big boltcutter. ");
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 3" && !check_boltcutter)
             {
@@ -328,6 +336,7 @@ public class Program
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 4" && check_shovel)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                System.Console.WriteLine("there is a wall between sector 3 and 4. You dig through it with your shovel. ");
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 4" && !check_shovel)
             {
@@ -374,7 +383,35 @@ What am I?
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
 Acquires Assault Rifle!");
                 player.EquippedWeapon = new Weapons("Assault Rifle", 250);
-            }        
+            }     
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "B" && !check_B)
+            {
+                System.Console.WriteLine($"You see a paper with a letter on the ground its the letter B. You take the paper. ");
+                passwordList.Add("B");
+
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "D" && !check_D)
+            {
+                System.Console.WriteLine($"You see a paper with a letter on the ground its the letter D. You take the paper. ");
+                passwordList.Add("D");
+                
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "M" && !check_M)
+            {
+                System.Console.WriteLine($"You see a paper with a letter on the ground its the letter M. You take the paper. ");
+                passwordList.Add("M");
+                
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "N" && !check_N)
+            {
+                System.Console.WriteLine($"You see a paper with a letter on the ground its the letter N. You take the paper. ");
+                passwordList.Add("N");
+                
+            }
             
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "GrieverFight" && !check_grieverfight)
             {
@@ -467,7 +504,14 @@ Handgun acquired!");
             };
             
         }
+
+            else
+            {
+                System.Console.WriteLine("Invalid input");
+            }
+        
+        }
         System.Console.WriteLine("You have arrived at the goal!");
-    }
 }
+            }
  
