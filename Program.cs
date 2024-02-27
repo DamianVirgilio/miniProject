@@ -265,10 +265,6 @@ public class Program
         ");
   
         System.Console.WriteLine(player.CurrentLocation);
-        System.Console.WriteLine(player.Name);
-        System.Console.WriteLine(player.Health);
-        System.Console.WriteLine(player.Strength);
-        System.Console.WriteLine(player.Medkit);
         // Enemy enemy1 = Enemy.GetEnemy("S");
         // System.Console.WriteLine(enemy1.NameEnemy);
         // Enemy enemy2 = Enemy.GetEnemy(2);
@@ -295,40 +291,40 @@ public class Program
         bool check_medkit = false; // gedaan
         while (player.CurrentLocation.Name != "Goal")
         {
-            Console.WriteLine("Current sector: " + player.CurrentLocation.Name);
+            Console.WriteLine("Current sector: " + player.CurrentLocation.Sector + "   Location: " + player.CurrentLocation.Name);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
 
-            if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && check_grieverfight)
+            if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && !check_grieverfight)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight)
             {
-                System.Console.WriteLine("You can't move to this sector yet");
+                System.Console.WriteLine("\nYou can't move to sector 2 yet\n");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && check_boltcutter)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 3" && check_boltcutter)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && !check_boltcutter)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 3" && !check_boltcutter)
             {
-                System.Console.WriteLine("You can't move to this sector yet");
+                System.Console.WriteLine("You can't move to Sector 3 yet");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && check_shovel)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 4" && check_shovel)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && !check_shovel)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 4" && !check_shovel)
             {
-                System.Console.WriteLine("You can't move to this sector yet");
+                System.Console.WriteLine("You can't move to Sector 4 yet");
             }
             // sectors 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Boltcutter" && !check_boltcutter)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-                Items Boltcutter = new Items("boltcutter");
+                System.Console.WriteLine("You have found boltcutters! Maybe you need this for a big lock?");
                 check_boltcutter = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Riddle" && !check_riddle)
@@ -337,11 +333,11 @@ public class Program
                 {
                     player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                     System.Console.WriteLine(@"There is a riddle written on the wall. It reads:
-                    I am a path with walls on each side, 
-                    Twists and turns where you must decide. 
-                    Dead ends and choices to make, 
-                    Navigate wisely, don't make a mistake.
-                    What am I?
+I am a path with walls on each side, 
+Twists and turns where you must decide. 
+Dead ends and choices to make, 
+Navigate wisely, don't make a mistake.
+What am I?
                     ");
                     string riddleAwnser = Console.ReadLine().ToUpper();
 
@@ -363,7 +359,7 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
-                Acquires Assault Rifle!");
+Acquires Assault Rifle!");
                 player.EquippedWeapon = new Weapons("Assault Rifle", 250);
             }        
             
@@ -377,7 +373,7 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
-                You take it because he does not need it anymore. ");
+You take it because he does not need it anymore. ");
 
                 player.EquippedWeapon = new Weapons("StunGun", 50);
 
@@ -387,8 +383,8 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
-                You wonder and ponder how it ended up there before you pick it up...
-                Handgun acquired!");
+You wonder and ponder how it ended up there before you pick it up...
+Handgun acquired!");
                 player.EquippedWeapon = new Weapons("Handgun", 100);
             }
 
