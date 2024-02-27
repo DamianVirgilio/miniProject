@@ -289,7 +289,9 @@ public class Program
         bool check_handgun = false; // gedaan
         bool check_shovel = false; // gedaan
         bool check_medkit = false; // gedaan
+        bool check_watch = false;
         string DayOrNight = "Day";
+        player.Watch(time_count);
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current sector: " + player.CurrentLocation.Sector);
@@ -382,6 +384,15 @@ You take it because he does not need it anymore. ");
                 player.EquippedWeapon = new Weapons("StunGun", 50);
 
             }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Watch" && !check_watch)
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                System.Console.WriteLine(@"You see light reflecting of a metal object.
+You walk towards and see that it's a watch! You can now see the time in your inventory");
+
+                player.EquippedWeapon = new Weapons("StunGun", 50);
+
+            }
 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Handgun" && !check_handgun)
             {
@@ -420,9 +431,7 @@ Handgun acquired!");
                 {
                     System.Console.WriteLine("That awnser was wrong. You walk away dissapointed but hopeful. ");
                 }
-
             }
-
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
@@ -434,6 +443,7 @@ Handgun acquired!");
                 if (randint == 1)
                 {
                     Enemy enemy = Enemy.GetEnemy(player.CurrentLocation.Sector);
+                    System.Console.WriteLine($"You have encountered a {enemy.NameEnemy}, prepare for battle!");
                     player.Combat(player, enemy);
                 }
             }

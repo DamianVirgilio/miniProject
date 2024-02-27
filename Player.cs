@@ -145,4 +145,22 @@ public class Player
             Console.WriteLine("You have been defeated!");
         }
     }
+    public void Watch(int time)
+    {
+        if (time >= 0 && time <= 9)
+        {
+            System.Console.WriteLine("You look at your watch and see:\n");
+            System.Console.WriteLine("   -------");
+            System.Console.WriteLine($"  | 0{time}:00 |");
+            System.Console.WriteLine("   -------\n");
+        }
+        else
+        {
+            System.Console.WriteLine("You look at your watch and see:\n");
+            System.Console.WriteLine("   -------");
+            System.Console.WriteLine($"  | {time}:00 |");
+            System.Console.WriteLine("   -------\n");
+        }
+    }
+
 }
