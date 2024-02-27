@@ -63,7 +63,7 @@ public static class World
         Location loc9      = new Location(LOCATION_ID_LOC9, "Sector 2", "Boltcutter");
         Location loc10     = new Location(LOCATION_ID_LOC10, "Sector 2", "Bandage");
         Location loc11     = new Location(LOCATION_ID_LOC11, "Sector 2", "");
-        Location loc12    = new Location(LOCATION_ID_LOC12, "Sector 3", "");
+        Location loc12     = new Location(LOCATION_ID_LOC12, "Sector 3", "");
         Location loc13     = new Location(LOCATION_ID_LOC13, "Sector 3", "B");
         Location loc14     = new Location(LOCATION_ID_LOC14, "Sector 3", "");
         Location loc15     = new Location(LOCATION_ID_LOC15, "Sector 3", "Riddle");
@@ -94,7 +94,6 @@ public static class World
         Location loc40     = new Location(LOCATION_ID_LOC40, "Sector 4", "M");
         Location loc41     = new Location(LOCATION_ID_LOC41, "Sector 4", "");
         Location loc42     = new Location(LOCATION_ID_LOC42, "Sector 3", "");
-        
 
 
         /* Map of locations
