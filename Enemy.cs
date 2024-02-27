@@ -10,7 +10,7 @@ public class Enemy
         Health = health;
         Damage = damage;
     }
-    public static Enemy GetEnemy(int level)
+    public static Enemy GetEnemy(string sector)
     {
         Enemy BabyGriever = new Enemy("Baby Griever", 40, 20);
         Enemy StalkerGriever = new Enemy("Stalker Griever", 150, 50);
@@ -18,16 +18,16 @@ public class Enemy
         Enemy InfernoGriever = new Enemy("Inferno Griever", 500, 150);
         List<Enemy> Enemies = new() {BabyGriever, StalkerGriever, TankGriever, InfernoGriever};
         Random random = new Random();
-        if(level == 1)
+        if(sector == "Sector 1")
         {
             return BabyGriever;
         }
-        else if(level == 2)
+        else if(sector == "Sector 2")
         {
             int randint = random.Next(2);
             return Enemies[randint];
         }
-        else if(level == 3)
+        else if(sector == "Sector 3")
         {
             int randint = random.Next(3);
             return Enemies[randint]; 
