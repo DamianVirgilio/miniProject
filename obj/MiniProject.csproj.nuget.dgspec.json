@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/meesbreedveld/.nuget/NuGet/NuGet.Config"
-=======
-    "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
-        "projectName": "MiniProject",
-        "projectPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
-        "packagesPath": "C:\\Users\\Shara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Shara\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> c75385f9812fa1bc5e12190f3fe1ad102384813f
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -70,11 +53,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
->>>>>>> c75385f9812fa1bc5e12190f3fe1ad102384813f
         }
       }
     }
