@@ -228,6 +228,7 @@
         System.Console.WriteLine(enemy4.NameEnemy);
         Enemy enemy5 = Enemy.GetEnemy(5);
         System.Console.WriteLine(enemy5.NameEnemy);
+        int time_count = 12;
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current location: " + player.CurrentLocation.Sector);
