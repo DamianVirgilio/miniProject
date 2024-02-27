@@ -42,4 +42,8 @@ public class Enemy
     {
         Health =- damage;
     }
+    public bool IsAlive()
+    {
+        return Health > 0;
+    }
 }

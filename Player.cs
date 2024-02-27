@@ -17,6 +17,7 @@ public class Player
         MaxHealth = 100;
         Health = MaxHealth;
         Strength = 10;
+        Weapons EquippedWeapon;
     }
 
     public bool TryMoveTo(Location newLocation)

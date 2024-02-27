@@ -96,14 +96,6 @@ public static class World
         Location loc42     = new Location(LOCATION_ID_LOC42, "Sector 3", "");
 
 
-        /* Map of locations
-         * +---+
-         * |123|
-         * | 4 |
-         * | 56|
-         * +---+
-         */
-
         // Link the locations together
         loc1.LocationToNorth = loc2; // naar Sector 1
         loc1.LocationToSouth = loc21;
@@ -305,6 +297,29 @@ public static class World
         
         ");
 
-        player.Health = player.MaxHealth;
+      
+      player.Health = player.MaxHealth;
+    }
+    public void Combat(Player player, Enemy enemy)
+    {
+        while (player.IsAlive() && enemy.IsAlive())
+        {
+            int totalDamage = player.Strength + player.EquippedWeapon.damage;
+
+            enemy.TakeDamage(totalDamage);
+
+            if (enemy.IsAlive())
+            {
+                player.TakeDamage(enemy.Damage);
+            }
+        }
+        if (player.IsAlive && !enemy.IsAlive())
+        {
+            Console.WriteLine("Griever Defeated!")
+        }
+        else if (!player.IsAlive && enemy.IsAlive())
+        {
+            Console.WriteLine("You have been defeated!")
+        }
     }
 }
