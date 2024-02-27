@@ -29,8 +29,6 @@ public class Program
         He also hands you a *WOODEN SPEAR* and a *COMPASS*
         ");
 
-        Weapons EquippedWeapon = new Weapons("Wooden Spear", 20);
-
         //[ADD WOODEN SPEAR AND COMPASS]
         
         //[CHECK WHAT IS AVAILIBLE TO DO IN BASE]
@@ -138,8 +136,29 @@ public class Program
         The two of you traverse the maze while carrying Alby!
 
         You notice vine on the walls so the two of you hoist Alby to hide him up in the vines.
+        
+        A GRIEVER JUMPS ON YOU!
+
+        You have 2 options:
+        1. Use Your Spear
+        2. Use Tactical Strategy
         ");
 
+        SpearOrTacticalStrat = Console.ReadLine();
+        if (SpearOrTacticalStrat == "1")
+        {
+            Location Sector1 = new Location();
+            Player player = new Player(Username, Sector1);
+
+            Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
+            player.EquippedWeapon = WoodenSpear;
+
+            Enemy enemy = enemy.GetEnemy()
+        }
+        else if (SpearOrTacticalStrat == "2")
+        {
+
+        }
         //[YOU ARE NOW IN THE MAZE AND NEED TO EXPLORE AND SURVIVE]
         
         //[YOU RUN INTO A GRIEVER]

@@ -128,13 +128,18 @@ public class Player
     {
         while (player.IsAlive() && enemy.IsAlive())
         {
-            int totalDamage = player.Strength + player.EquippedWeapon.damage;
-
+            int PlayerDamage = player.Strength + player.EquippedWeapon.damage;
             enemy.TakeDamage(totalDamage);
+
+            Console.WriteLine($"Player attacks for {PlayerDamage} damage.");
+            Console.WriteLine($"Enemy health: {enemy.Health}");
 
             if (enemy.IsAlive())
             {
                 player.TakeDamage(enemy.Damage);
+
+                Console.Writeline($"Enemy attacks for {enemy.Damage} damage.");
+                Console.Writeline($"Players health: {player.Health}")
             }
         }
         if (player.IsAlive() && !enemy.IsAlive())
