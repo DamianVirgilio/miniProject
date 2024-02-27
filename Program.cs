@@ -29,13 +29,13 @@ public class Program
         He also hands you a *WOODEN SPEAR* and a *COMPASS*
         ");
 
-        Weapons EquippedWeapon = new Weapons("Wooden Spear", 20)
+        Weapons EquippedWeapon = new Weapons("Wooden Spear", 20);
 
         //[ADD WOODEN SPEAR AND COMPASS]
         
         //[CHECK WHAT IS AVAILIBLE TO DO IN BASE]
         
-        Console.WriteLine
+        System.Console.WriteLine
         (@" 
         Choose what you want to do in your base:
         1. Sleep
@@ -226,14 +226,8 @@ public class Program
         He wants you find his parents and give it to them.
         You assure Chuck that you will find a way for all of you escape and hand him back his toy.
         You tell him that he will get the chance to give his toy to his parents himself.
-        
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
->>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
+
         By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
         The *CILINDER-LIKE-DEVICE starts beeping.
         They follow to where the beep STOPS.
@@ -270,14 +264,6 @@ public class Program
         An EMPTY world with NO ONE AROUND.
         ");
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
->>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
@@ -342,7 +328,7 @@ public class Program
             // sectors 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Boltcutter" && !check_boltcutter)
             {
-                items = new Items("boltcutter");
+                Items items = new Items("boltcutter");
                 check_boltcutter = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Riddle" && !check_riddle)
@@ -356,7 +342,7 @@ public class Program
                     Navigate wisely, don't make a mistake.
                     What am I?
                     ");
-                    string riddleAwnser = system.Console.ReadLine().ToUpper();
+                    string riddleAwnser = Console.ReadLine().ToUpper();
 
                     if (riddleAwnser == "MAZE")
                     {
@@ -369,7 +355,7 @@ public class Program
                     else
                     {
                         System.Console.WriteLine("That does not seem to be the awnser but the gods of the maze are kind enough to let you try again. ");
-                    }
+                    };
                 }
 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Assault Rifle" && !check_assaultrifle)    
@@ -417,7 +403,7 @@ public class Program
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-            }
+            };
         }
         Console.WriteLine("You have arrived at the goal!");
     }

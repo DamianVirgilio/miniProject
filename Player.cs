@@ -9,6 +9,7 @@ public class Player
     public int Bandage = 0;
     public int level = 1;
     public Location CurrentLocation;
+    public Weapons EquippedWeapon;
 
     public Player(string _name, Location currentLocation)
     {
@@ -17,7 +18,6 @@ public class Player
         MaxHealth = 100;
         Health = MaxHealth;
         Strength = 10;
-        Weapons EquippedWeapon;
     }
 
     public bool TryMoveTo(Location newLocation)
@@ -119,6 +119,28 @@ public class Player
             {
                 System.Console.WriteLine("You do not have any Bandages");
             }
+        }
+    }
+    public void Combat(Player player, Enemy enemy)
+    {
+        while (player.IsAlive() && enemy.IsAlive())
+        {
+            int totalDamage = player.Strength + player.EquippedWeapon.damage;
+
+            enemy.TakeDamage(totalDamage);
+
+            if (enemy.IsAlive())
+            {
+                player.TakeDamage(enemy.Damage);
+            }
+        }
+        if (player.IsAlive() && !enemy.IsAlive())
+        {
+            Console.WriteLine("Griever Defeated!");
+        }
+        else if (!player.IsAlive() && enemy.IsAlive())
+        {
+            Console.WriteLine("You have been defeated!");
         }
     }
 }
