@@ -1,4 +1,4 @@
-class Weapons
+public class Weapons
 {
     public string weaponName;
     public int damage;
