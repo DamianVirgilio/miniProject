@@ -29,7 +29,7 @@ public class Program
         He also hands you a *WOODEN SPEAR* and a *COMPASS*
         ");
 
-        Weapons EquippedWeapon = new Weapons("Wooden Spear", 20)
+        Weapons EquippedWeapon = new Weapons("Wooden Spear", 20);
 
         //[ADD WOODEN SPEAR AND COMPASS]
         
@@ -268,10 +268,6 @@ public class Program
         ");
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
@@ -364,8 +360,8 @@ public class Program
                     {
                         System.Console.WriteLine("That does not seem to be the awnser but the gods of the maze are kind enough to let you try again. ");
                     }
-                }
-
+                };
+            }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Assault Rifle" && !check_assaultrifle)    
             {
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
@@ -412,7 +408,8 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
+        }
+
         };
         Console.WriteLine("You have arrived at the goal!");
-    }
-}
+ 

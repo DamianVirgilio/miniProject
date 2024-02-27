@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniProject", "MiniProject.csproj", "{18DB13E7-FE66-4BBF-BD16-E20B648A349C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFields", "..\..\Semester 2 C#\StaticFields\StaticFields.csproj", "{C54F8086-0E61-405C-ADB5-92D5C19D9C44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticFields", "C:\Users\damia\Documents\School informatica\miniProject\miniProject", "{C54F8086-0E61-405C-ADB5-92D5C19D9C44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

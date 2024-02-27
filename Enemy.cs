@@ -44,6 +44,6 @@ public class Enemy
     }
     public bool IsAlive()
     {
-        return Health > 0
+        return Health > 0;
     }
 }
