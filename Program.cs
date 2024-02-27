@@ -26,7 +26,11 @@ public class Program
         That day you notice an opening in the wall so Alby quickly explains that going beyond the wall is prohibited.
 
         Later that day, a younger teenager named Chuck comes to help you set up a place to sleep.
+<<<<<<< HEAD
         He also hands you a *WOODEN SPEAR* and a *COMPASS*
+=======
+        He also hands you a *WOODEN SPEAR*
+>>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
         ");
 
         //[ADD WOODEN SPEAR AND COMPASS]
@@ -66,11 +70,17 @@ public class Program
         You suddenly remember your NAME!
         ");
 
+<<<<<<< HEAD
         //[INPUT NAME]
+=======
+        Console.WriteLine("What is your Name?");
+        string Username = System.Console.ReadLine();
+        Player player = new Player(Username, World.Locations[0]);
+>>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
 
         Console.WriteLine
-        (@"
-        You scream that your name is [NAME]
+        (@$"
+        You scream that your name is {Username}
         The Gladers celibrate and welcome you to the group, even Gally.
 
         The celebration cuts when something wails in the distance.
@@ -223,6 +233,7 @@ public class Program
         You assure Chuck that you will find a way for all of you escape and hand him back his toy.
         You tell him that he will get the chance to give his toy to his parents himself.
         
+<<<<<<< HEAD
         By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
         The *CILINDER-LIKE-DEVICE starts beeping.
         They follow to where the beep STOPS.
@@ -260,10 +271,10 @@ public class Program
         ");
 
 
+=======
+        ");
+>>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
         
-        System.Console.WriteLine("What is your Name?");
-        string Username = System.Console.ReadLine();
-        Player player = new Player(Username, World.Locations[0]);
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
         System.Console.WriteLine(player.Health);
@@ -279,6 +290,7 @@ public class Program
         System.Console.WriteLine(enemy4.NameEnemy);
         Enemy enemy5 = Enemy.GetEnemy(5);
         System.Console.WriteLine(enemy5.NameEnemy);
+        int time_count = 12;
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current location: " + player.CurrentLocation.Sector);
