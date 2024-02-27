@@ -406,6 +406,23 @@ Handgun acquired!");
                 player.PickUpBandaid(1);
             }
 
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Goal")
+            {
+                System.Console.WriteLine("There seems to be a keypad. It asks you to enter a code. ");
+                System.Console.WriteLine("Enter code: ");
+                string code = Console.ReadLine().ToUpper();
+
+                if (code == "BADMAN")
+                {
+                    player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                }
+                else
+                {
+                    System.Console.WriteLine("That awnser was wrong. You walk away dissapointed but hopeful. ");
+                }
+
+            }
+
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
