@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\damia\\.nuget\\packages\\": {}
+    "/Users/meesbreedveld/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj",
+      "projectUniqueName": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
       "projectName": "MiniProject",
-      "projectPath": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj",
-      "packagesPath": "C:\\Users\\damia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\obj\\",
+      "projectPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
+      "packagesPath": "/Users/meesbreedveld/.nuget/packages/",
+      "outputPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/meesbreedveld/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -54,30 +54,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
       }
     }
   }
