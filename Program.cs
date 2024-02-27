@@ -535,6 +535,10 @@ You walk towards and see that it's a watch! You can now see the time in your inv
             {
                 time_count = 0;
             }
+            else
+            {
+                time_count += 1;
+            }
         }
 
             else
