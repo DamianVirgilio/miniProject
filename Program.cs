@@ -312,7 +312,10 @@ public class Program
             {
                 System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b3f6e5dd6a3f2d26094b531e7abcf9fa575f70c
             if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
@@ -502,7 +505,6 @@ Handgun acquired!");
                 >= 20 and <= 24 => "Night",
                 _ => "Error"
             };
-            
         }
 
             else
