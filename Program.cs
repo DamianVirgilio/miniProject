@@ -1,4 +1,7 @@
-﻿public class Program
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+public class Program
 {
     public static void Main()
     {
@@ -23,12 +26,26 @@
         That day you notice an opening in the wall so Alby quickly explains that going beyond the wall is prohibited.
 
         Later that day, a younger teenager named Chuck comes to help you set up a place to sleep.
+<<<<<<< HEAD
+        He also hands you a *WOODEN SPEAR* and a *COMPASS*
+=======
         He also hands you a *WOODEN SPEAR*
+>>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
         ");
 
-        [CHECK WHAT IS AVAILIBLE TO DO IN BASE]
+        //[ADD WOODEN SPEAR AND COMPASS]
+        
+        //[CHECK WHAT IS AVAILIBLE TO DO IN BASE]
+        
+        Console.WriteLine
+        (@" 
+        Choose what you want to do in your base:
+        1. Sleep
+        2. Use Crafting Bench
+        3. Exit and Continue
+        ");
 
-        [WHEN EXITING BASE]
+        //[WHEN EXITING BASE]
 
         Console.WriteLine
         (@"
@@ -44,18 +61,22 @@
         As soon as you say that you want to be a runner, one of the Gladers called Gally challenges you to spar.
         ");
 
-        [HAND COMBAT, YOU VS GALLY]
-        [HE FIRST DEFEATS YOU AND TAUNTS YOU BUT THEN YOU FIND A WAY TO USE HIS OWN STRENGTH AGAINST HIM]
-        [IMPORTANT; AT THE END OF THE FIGHT YOU FALL AND HIT YOUR HEAD]
+        //[HAND COMBAT, YOU VS GALLY]
+        //[HE FIRST DEFEATS YOU AND TAUNTS YOU BUT THEN YOU FIND A WAY TO USE HIS OWN STRENGTH AGAINST HIM]
+        //[IMPORTANT: AT THE END OF THE FIGHT YOU FALL AND HIT YOUR HEAD]
 
         Console.WriteLine
         (@"
         You suddenly remember your NAME!
         ");
 
+<<<<<<< HEAD
+        //[INPUT NAME]
+=======
         Console.WriteLine("What is your Name?");
         string Username = System.Console.ReadLine();
         Player player = new Player(Username, World.Locations[0]);
+>>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
 
         Console.WriteLine
         (@$"
@@ -79,8 +100,8 @@
         He LOOKS SICK and JUMPS on you and attemps to CHOKE you!
         ");
 
-        [TRY TO BREATHE]
-        [FIND AN OBJECT NEAR YOU TO SLAM BENS HEAD TO ESCAPE]
+        //[TRY TO BREATHE]
+        //[FIND AN OBJECT NEAR YOU TO SLAM BENS HEAD TO ESCAPE]
 
         Console.WriteLine
         (@"
@@ -88,8 +109,8 @@
         You RUN back to the Glade and get into a FIGHT with Ben!
         ");
 
-        [HAND COMBAT, YOU VS BEN]
-        [YOU GRAB YOUR SPEAR AND THROW IT STRAIGHT INTO BENS HEAD]
+        //[HAND COMBAT, YOU VS BEN]
+        //[YOU GRAB YOUR SPEAR AND THROW IT STRAIGHT INTO BENS HEAD]
 
         Console.WriteLine
         (@"
@@ -125,14 +146,14 @@
         You notice vine on the walls so the two of you hoist Alby to hide him up in the vines.
         ");
 
-        [YOU ARE NOW IN THE MAZE AND NEED TO EXPLORE AND SURVIVE]
+        //[YOU ARE NOW IN THE MAZE AND NEED TO EXPLORE AND SURVIVE]
         
-        [YOU RUN INTO A GRIEVER]
-        [YOU HAVE 2 OPTIONS OF KILLING A GRIEVER]
-        [1. USE YOUR SPEAR]
-        [2. TACTICAL KILL] [GO THROUGH CLOSING WALLS WHERE YOU BARELY MAKE IT OUT]
+        //[YOU RUN INTO A GRIEVER]
+        //[YOU HAVE 2 OPTIONS OF KILLING A GRIEVER]
+        //[1. USE YOUR SPEAR]
+        //[2. TACTICAL KILL] [GO THROUGH CLOSING WALLS WHERE YOU BARELY MAKE IT OUT]
 
-        [IN THE MORNING WHEN THE WALLS OPEN YOU HEAD BACK AND FIND A SLINGSHOT]
+        //[IN THE MORNING WHEN THE WALLS OPEN YOU HEAD BACK AND FIND A SLINGSHOT]
 
         Console.WriteLine
         (@"
@@ -162,7 +183,7 @@
         It would be in our best intrest to investigate the body.
         ");
 
-        [GO BACK INTO THE MAZE TO THE GRIEVERS BODY]
+        //[GO BACK INTO THE MAZE TO THE GRIEVERS BODY]
 
         Console.WriteLine
         (@"
@@ -171,11 +192,11 @@
         The device has a little light which is 'RED', the NUMBER '4' and a LABEl: 'WCKD'.
         ");
 
-        [RETURN TO THE GLADE]
-        [RETURN TO BASE OR EXPLORE MAZE]
-        [EXPLORE ALL SECTORS (1-4)]
+        //[RETURN TO THE GLADE]
+        //[RETURN TO BASE OR EXPLORE MAZE]
+        //[EXPLORE ALL SECTORS (1-4)]
 
-        [CONTINUE STORY AFTER EXPLORING ALL SECTORS]
+        //[CONTINUE STORY AFTER EXPLORING ALL SECTORS]
 
         Console.WriteLine
         (@"
@@ -212,7 +233,47 @@
         You assure Chuck that you will find a way for all of you escape and hand him back his toy.
         You tell him that he will get the chance to give his toy to his parents himself.
         
+<<<<<<< HEAD
+        By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
+        The *CILINDER-LIKE-DEVICE starts beeping.
+        They follow to where the beep STOPS.
+        When they reach a dead end, the small light on the CILINDER-LIKE-DEVICE turns *GREEN*.
+        Suddenly the walls open a path.
+        At the end of the path a *RED* light scans them.
+        The light turns *GREEN* and they see a way to leave the maze.
+
+        Suddenly the WALLS start CLOSING.
+        Minho and you run back to The Glade.
+
+        When arriving in The Glade:
+        You see that the main walls stay open during the NIGHT.
+        Grievers start coming in and you GATHER everyone to escape.
+
+        Run back to SECTOR 4 with EVERYONE:
         ");
+
+        //[RUN THROUGH THE MAZE TO SECTOR 4]
+
+        Console.WriteLine
+        (@"
+        Uppon arrival at SECTOR 4, you get greeted with a puzzle:
+        ");
+
+        //[END GAME PUZZLE]
+
+        Console.WriteLine
+        (@"
+        PUZZLE COMPLETED:
+        The DOORS OPEN and everyone ESCAPES.
+
+        The outisde world looks like an ABANDONED DESERT with BARRON SKYSCRAPERS.
+        An EMPTY world with NO ONE AROUND.
+        ");
+
+
+=======
+        ");
+>>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
