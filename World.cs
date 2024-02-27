@@ -96,14 +96,6 @@ public static class World
         Location loc42     = new Location(LOCATION_ID_LOC42, "Sector 3", "");
 
 
-        /* Map of locations
-         * +---+
-         * |123|
-         * | 4 |
-         * | 56|
-         * +---+
-         */
-
         // Link the locations together
         loc1.LocationToNorth = loc2; // naar Sector 1
         loc1.LocationToSouth = loc21;
