@@ -22,7 +22,7 @@
         System.Console.WriteLine(enemy5.NameEnemy);
         while (player.CurrentLocation.Name != "Goal")
         {
-            Console.WriteLine("Current location: " + player.CurrentLocation.Name);
+            Console.WriteLine("Current location: " + player.CurrentLocation.Sector);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
