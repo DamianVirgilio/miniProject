@@ -296,7 +296,7 @@ public class Program
         // System.Console.WriteLine(enemy5.NameEnemy);
         int time_count = 12;
         bool check_boltcutter = false; // gedaan
-        bool check_bandage = false;
+        bool check_bandage = false; // gedaan
         bool check_B = false;
         bool check_D = false;
         bool check_M = false;

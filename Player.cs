@@ -68,6 +68,27 @@ public class Player
         System.Console.WriteLine("---------------------");
     }
 
+    public void ShowChoices(Weapons CurrentWeapon)
+    {
+        System.Console.WriteLine(@"1. Equip Weapon
+                                   2. Heal yourself
+                                   3. Show Items
+                                   4. Continue the Maze");
+
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                CurrentWeapon.ShowWeapons();
+                break;
+            case "2":
+
+            default:
+        }
+
+    }
+
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
     {
 
