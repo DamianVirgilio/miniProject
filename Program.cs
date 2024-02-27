@@ -275,7 +275,7 @@ public class Program
         // System.Console.WriteLine(enemy4.NameEnemy);
         // Enemy enemy5 = Enemy.GetEnemy(5);
         // System.Console.WriteLine(enemy5.NameEnemy);
-        int time_count = 12;
+        int time_count = 7;
         bool check_boltcutter = false; // gedaan
         bool check_bandage = false; // gedaan
         bool check_B = false;
@@ -289,14 +289,27 @@ public class Program
         bool check_handgun = false; // gedaan
         bool check_shovel = false; // gedaan
         bool check_medkit = false; // gedaan
+        string DayOrNight = "Day";
         while (player.CurrentLocation.Name != "Goal")
         {
+<<<<<<< HEAD
+            Console.WriteLine("Current sector: " + player.CurrentLocation.Sector);
+            Console.WriteLine(player.CurrentLocation.Compass());
+            System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
+            string LocationMove = System.Console.ReadLine().ToUpper();
+            if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Home" && DayOrNight == "Night")
+            {
+                System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && check_grieverfight)
+=======
             Console.WriteLine("Current sector: " + player.CurrentLocation.Sector + "   Location: " + player.CurrentLocation.Name);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
 
             if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
+>>>>>>> 684041450844d99b600de48be280bc9854a15271
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
@@ -423,6 +436,36 @@ Handgun acquired!");
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             };
+            if (DayOrNight == "Night")
+            {
+                Random random = new Random();
+                int randint = random.Next(4);
+                if (randint == 1)
+                {
+                    Enemy enemy = Enemy.GetEnemy(player.CurrentLocation.Sector);
+                    player.Combat(player, enemy);
+                }
+            }
+            if (!player.IsAlive())
+            {
+                player.CurrentLocation.ID = 1;
+            }
+            if (time_count == 24)
+            {
+                time_count = 0;
+            }
+            else
+            {
+                time_count += 1;
+            }
+            DayOrNight = time_count switch
+            {
+                >= 0 and <= 6 => "Night",
+                >= 7 and <= 19 => "Day",
+                >= 20 and <= 24 => "Night",
+                _ => "Error"
+            };
+            
         }
         System.Console.WriteLine("You have arrived at the goal!");
     }

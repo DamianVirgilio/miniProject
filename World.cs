@@ -80,7 +80,7 @@ public static class World
         Location loc26     = new Location(LOCATION_ID_LOC26, "Sector 2", "Stungun");
         Location loc27     = new Location(LOCATION_ID_LOC27, "Sector 2", "");
         Location loc28     = new Location(LOCATION_ID_LOC28, "Sector 2", "N");
-        Location loc29     = new Location(LOCATION_ID_LOC29, "Sector 2", "");
+        Location loc29     = new Location(LOCATION_ID_LOC29, "Sector 2", "Watch");
         Location loc30     = new Location(LOCATION_ID_LOC30, "Sector 2", "");
         Location loc31     = new Location(LOCATION_ID_LOC31, "Sector 3", "Handgun");
         Location loc32     = new Location(LOCATION_ID_LOC32, "Sector 1", "");

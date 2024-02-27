@@ -89,7 +89,6 @@ public class Player
             default:
                 break;
         }
-
     }
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
