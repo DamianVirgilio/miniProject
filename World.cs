@@ -292,7 +292,7 @@ public static class World
         Locations.Add(loc42);
     }
 
-    public void Home(Player player)
+    public static void Home(Player player)
     {
         System.Console.WriteLine(@"
         You are now back home safe luckily. 
