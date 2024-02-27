@@ -345,14 +345,20 @@ public class Program
                 System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
             }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75f1d6591d7feef8a6176495533dd0b3f47836eb
             if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("You have opened the gate to sector 2. ");
             }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75f1d6591d7feef8a6176495533dd0b3f47836eb
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight)
 
             {
