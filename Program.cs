@@ -29,6 +29,8 @@ public class Program
         He also hands you a *WOODEN SPEAR* and a *COMPASS*
         ");
 
+        Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
+
         //[ADD WOODEN SPEAR AND COMPASS]
         
         //[CHECK WHAT IS AVAILIBLE TO DO IN BASE]
@@ -144,29 +146,36 @@ public class Program
         2. Use Tactical Strategy
         ");
 
-        SpearOrTacticalStrat = Console.ReadLine();
+        player.EquippedWeapon = WoodenSpear;
+        
+        string SpearOrTacticalStrat = Console.ReadLine();
         if (SpearOrTacticalStrat == "1")
         {
-            Location Sector1 = new Location();
-            Player player = new Player(Username, Sector1);
-
-            Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
-            player.EquippedWeapon = WoodenSpear;
-
-            Enemy enemy = enemy.GetEnemy()
+            Enemy enemy = Enemy.GetEnemy("Sector 1");
+            player.Combat(player, enemy);
+            
         }
         else if (SpearOrTacticalStrat == "2")
         {
-
+            Console.WriteLine
+            (@"
+            You Started RUNNING while the Griever is coming after you!
+            You SEE an OPENING and JUMP through!
+            He STILL follows you while you run past a few WALLS CLOSING!
+            You squeeze through TWO of the CLOSING WALLS!
+            YOU BARELY GET OUT!
+            The Griever gets STUCK inside and gets KILLED!
+            ");
         }
-        //[YOU ARE NOW IN THE MAZE AND NEED TO EXPLORE AND SURVIVE]
-        
-        //[YOU RUN INTO A GRIEVER]
-        //[YOU HAVE 2 OPTIONS OF KILLING A GRIEVER]
-        //[1. USE YOUR SPEAR]
-        //[2. TACTICAL KILL] [GO THROUGH CLOSING WALLS WHERE YOU BARELY MAKE IT OUT]
 
-        //[IN THE MORNING WHEN THE WALLS OPEN YOU HEAD BACK AND FIND A SLINGSHOT]
+        Console.WriteLine
+        (@"
+        While finding the exit of the Maze you find a slingshot.
+        You take it and Equip it.
+        ");
+        
+        Weapons SlingShot = new Weapons("SlingShot", 30);
+        player.EquippedWeapon = SlingShot;
 
         Console.WriteLine
         (@"

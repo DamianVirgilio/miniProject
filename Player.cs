@@ -36,7 +36,7 @@ public class Player
 
     public void TakeDamage(int damage)
     {
-        Health =- damage;
+        Health -= damage;
     }
 
     public void HealthUpgrade(int AmountHealth)
@@ -129,7 +129,7 @@ public class Player
         while (player.IsAlive() && enemy.IsAlive())
         {
             int PlayerDamage = player.Strength + player.EquippedWeapon.damage;
-            enemy.TakeDamage(totalDamage);
+            enemy.TakeDamage(PlayerDamage);
 
             Console.WriteLine($"Player attacks for {PlayerDamage} damage.");
             Console.WriteLine($"Enemy health: {enemy.Health}");
@@ -138,8 +138,8 @@ public class Player
             {
                 player.TakeDamage(enemy.Damage);
 
-                Console.Writeline($"Enemy attacks for {enemy.Damage} damage.");
-                Console.Writeline($"Players health: {player.Health}")
+                Console.WriteLine($"Enemy attacks for {enemy.Damage} damage.");
+                Console.WriteLine($"Players health: {player.Health}");
             }
         }
         if (player.IsAlive() && !enemy.IsAlive())
