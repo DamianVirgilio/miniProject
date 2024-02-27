@@ -35,7 +35,7 @@ public class Program
         
         //[CHECK WHAT IS AVAILIBLE TO DO IN BASE]
         
-        Console.WriteLine
+        System.Console.WriteLine
         (@" 
         Choose what you want to do in your base:
         1. Sleep
@@ -226,14 +226,8 @@ public class Program
         He wants you find his parents and give it to them.
         You assure Chuck that you will find a way for all of you escape and hand him back his toy.
         You tell him that he will get the chance to give his toy to his parents himself.
-        
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
->>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
+
         By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
         The *CILINDER-LIKE-DEVICE starts beeping.
         They follow to where the beep STOPS.
@@ -270,7 +264,10 @@ public class Program
         An EMPTY world with NO ONE AROUND.
         ");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75b0b00686ae8efdc398d2f80cf09f44690d5019
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
@@ -335,7 +332,11 @@ public class Program
             // sectors 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Boltcutter" && !check_boltcutter)
             {
+<<<<<<< HEAD
                 Items Boltcutter = new Items("boltcutter");
+=======
+                Items items = new Items("boltcutter");
+>>>>>>> 75b0b00686ae8efdc398d2f80cf09f44690d5019
                 check_boltcutter = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Riddle" && !check_riddle)
@@ -410,7 +411,7 @@ public class Program
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-            }
+            };
         }
 
     }

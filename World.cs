@@ -300,6 +300,7 @@ public static class World
       
       player.Health = player.MaxHealth;
     }
+<<<<<<< HEAD
     public static void Combat(Player player, Enemy enemy)
     {
         while (player.IsAlive() && enemy.IsAlive())
@@ -322,4 +323,6 @@ public static class World
         //     Console.WriteLine("You have been defeated!");
         // }
     }
+=======
+>>>>>>> 75b0b00686ae8efdc398d2f80cf09f44690d5019
 }
