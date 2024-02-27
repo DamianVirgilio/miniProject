@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj": {}
+  },
+  "projects": {
+    "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
+        "projectName": "MiniProject",
+        "projectPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
+        "packagesPath": "/Users/meesbreedveld/.nuget/packages/",
+        "outputPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/meesbreedveld/.nuget/NuGet/NuGet.Config"
+>>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -71,7 +88,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
+>>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
         }
       }
     }

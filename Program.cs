@@ -229,8 +229,11 @@ public class Program
         
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
+>>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
         By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
         The *CILINDER-LIKE-DEVICE starts beeping.
         They follow to where the beep STOPS.
@@ -267,23 +270,33 @@ public class Program
         An EMPTY world with NO ONE AROUND.
         ");
 
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cdbc5d713a3ab3ac76f66b25f5153cc95185a9c1
+>>>>>>> d359b81588f7db40f08b93f038368f2489526c9e
+>>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
         System.Console.WriteLine(player.Health);
         System.Console.WriteLine(player.Strength);
         System.Console.WriteLine(player.Medkit);
-        Enemy enemy1 = Enemy.GetEnemy(1);
-        System.Console.WriteLine(enemy1.NameEnemy);
-        Enemy enemy2 = Enemy.GetEnemy(2);
-        System.Console.WriteLine(enemy2.NameEnemy);
-        Enemy enemy3 = Enemy.GetEnemy(3);
-        System.Console.WriteLine(enemy3.NameEnemy);
-        Enemy enemy4 = Enemy.GetEnemy(4);
-        System.Console.WriteLine(enemy4.NameEnemy);
-        Enemy enemy5 = Enemy.GetEnemy(5);
-        System.Console.WriteLine(enemy5.NameEnemy);
+        // Enemy enemy1 = Enemy.GetEnemy("S");
+        // System.Console.WriteLine(enemy1.NameEnemy);
+        // Enemy enemy2 = Enemy.GetEnemy(2);
+        // System.Console.WriteLine(enemy2.NameEnemy);
+        // Enemy enemy3 = Enemy.GetEnemy(3);
+        // System.Console.WriteLine(enemy3.NameEnemy);
+        // Enemy enemy4 = Enemy.GetEnemy(4);
+        // System.Console.WriteLine(enemy4.NameEnemy);
+        // Enemy enemy5 = Enemy.GetEnemy(5);
+        // System.Console.WriteLine(enemy5.NameEnemy);
         int time_count = 12;
         bool check_boltcutter = false; // gedaan
         bool check_bandage = false; // gedaan
@@ -409,7 +422,10 @@ public class Program
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
         }
+<<<<<<< HEAD
 
         };
+=======
+>>>>>>> 0a944e9776a7d6ba73ad541dcea959281c1743d3
         Console.WriteLine("You have arrived at the goal!");
  

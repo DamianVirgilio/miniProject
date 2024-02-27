@@ -284,7 +284,7 @@ public static class World
         Locations.Add(loc42);
     }
 
-    public void Home(Player player)
+    public static void Home(Player player)
     {
         System.Console.WriteLine(@"
         You are now back home safe luckily. 
@@ -300,7 +300,7 @@ public static class World
       
       player.Health = player.MaxHealth;
     }
-    public void Combat(Player player, Enemy enemy)
+    public static void Combat(Player player, Enemy enemy)
     {
         while (player.IsAlive() && enemy.IsAlive())
         {
@@ -315,11 +315,11 @@ public static class World
         }
         if (player.IsAlive && !enemy.IsAlive())
         {
-            Console.WriteLine("Griever Defeated!")
+            Console.WriteLine("Griever Defeated!");
         }
         else if (!player.IsAlive && enemy.IsAlive())
         {
-            Console.WriteLine("You have been defeated!")
+            Console.WriteLine("You have been defeated!");
         }
     }
 }
