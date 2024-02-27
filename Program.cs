@@ -204,7 +204,7 @@
 
         The two of them head to *THE PIT*
         You ask why gally HATES you.
-        He reveales that everything started falling apart as soon as you arrived.
+        He reveals that everything started falling apart as soon as you arrived.
 
         Chuck comes up to you to talk to you about what it's like to live outside of the walls and if he will ever meet his parents.
         He hands you a toy that he said he thinks came from his parents.
@@ -230,13 +230,53 @@
         Enemy enemy5 = Enemy.GetEnemy(5);
         System.Console.WriteLine(enemy5.NameEnemy);
         int time_count = 12;
+        bool check_boltcutter = false;
+        bool check_bandage = false;
+        bool check_B = false;
+        bool check_D = false;
+        bool check_M = false;
+        bool check_N = false;
+        bool check_riddle = false;
+        bool check_assaultriffle = false;
+        bool check_grieverfight = false;
+        bool check_stungun = false;
+        bool check_handgun = false;
+        bool check_shovel = false;
+        bool check_medkit = false;
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current location: " + player.CurrentLocation.Sector);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
-            player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+            if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && check_grieverfight)
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && !check_grieverfight)
+            {
+                System.Console.WriteLine("You can't move to this sector yet");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && check_boltcutter)
+            {
+                System.Console.WriteLine("You can't move to this sector yet");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && !check_boltcutter)
+            {
+                System.Console.WriteLine("You can't move to this sector yet");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && check_shovel)
+            {
+                System.Console.WriteLine("You can't move to this sector yet");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && !check_shovel)
+            {
+                System.Console.WriteLine("You can't move to this sector yet");
+            }
+            else
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+            }
         };
         Console.WriteLine("You have arrived at the goal!");
     }
