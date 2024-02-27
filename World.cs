@@ -291,4 +291,20 @@ public static class World
         Locations.Add(loc41);
         Locations.Add(loc42);
     }
+
+    public void Home(Player player)
+    {
+        System.Console.WriteLine(@"
+        You are now back home safe luckily. 
+        You take some rest so you can go back in the maze the next day. 
+
+        ZZZzzZZZzzzzZZZzZzZzzzZ
+
+        You have woken up and feel rested!
+        Your HP is now full!
+        
+        ");
+
+        player.Health = player.MaxHealth;
+    }
 }
