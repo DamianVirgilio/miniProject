@@ -36,7 +36,7 @@ public class Player
 
     public void TakeDamage(int damage)
     {
-        Health =- damage;
+        Health -= damage;
     }
 
     public void HealthUpgrade(int AmountHealth)
@@ -94,6 +94,7 @@ public class Player
             default:
                 break;
         }
+
     }
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
@@ -132,13 +133,18 @@ public class Player
     {
         while (player.IsAlive() && enemy.IsAlive())
         {
-            int totalDamage = player.Strength + player.EquippedWeapon.damage;
+            int PlayerDamage = player.Strength + player.EquippedWeapon.damage;
+            enemy.TakeDamage(PlayerDamage);
 
-            enemy.TakeDamage(totalDamage);
+            Console.WriteLine($"Player attacks for {PlayerDamage} damage.");
+            Console.WriteLine($"Enemy health: {enemy.Health}");
 
             if (enemy.IsAlive())
             {
                 player.TakeDamage(enemy.Damage);
+
+                Console.WriteLine($"Enemy attacks for {enemy.Damage} damage.");
+                Console.WriteLine($"Players health: {player.Health}");
             }
         }
         if (player.IsAlive() && !enemy.IsAlive())

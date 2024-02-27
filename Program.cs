@@ -29,7 +29,7 @@ public class Program
         He also hands you a *WOODEN SPEAR* and a *COMPASS*
         ");
 
-        Weapons EquippedWeapon = new Weapons("Wooden Spear", 20);
+        Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
 
         //[ADD WOODEN SPEAR AND COMPASS]
         
@@ -138,16 +138,44 @@ public class Program
         The two of you traverse the maze while carrying Alby!
 
         You notice vine on the walls so the two of you hoist Alby to hide him up in the vines.
+        
+        A GRIEVER JUMPS ON YOU!
+
+        You have 2 options:
+        1. Use Your Spear
+        2. Use Tactical Strategy
         ");
 
-        //[YOU ARE NOW IN THE MAZE AND NEED TO EXPLORE AND SURVIVE]
+        player.EquippedWeapon = WoodenSpear;
         
-        //[YOU RUN INTO A GRIEVER]
-        //[YOU HAVE 2 OPTIONS OF KILLING A GRIEVER]
-        //[1. USE YOUR SPEAR]
-        //[2. TACTICAL KILL] [GO THROUGH CLOSING WALLS WHERE YOU BARELY MAKE IT OUT]
+        string SpearOrTacticalStrat = Console.ReadLine();
+        if (SpearOrTacticalStrat == "1")
+        {
+            Enemy enemy = Enemy.GetEnemy("Sector 1");
+            player.Combat(player, enemy);
+            
+        }
+        else if (SpearOrTacticalStrat == "2")
+        {
+            Console.WriteLine
+            (@"
+            You Started RUNNING while the Griever is coming after you!
+            You SEE an OPENING and JUMP through!
+            He STILL follows you while you run past a few WALLS CLOSING!
+            You squeeze through TWO of the CLOSING WALLS!
+            YOU BARELY GET OUT!
+            The Griever gets STUCK inside and gets KILLED!
+            ");
+        }
 
-        //[IN THE MORNING WHEN THE WALLS OPEN YOU HEAD BACK AND FIND A SLINGSHOT]
+        Console.WriteLine
+        (@"
+        While finding the exit of the Maze you find a slingshot.
+        You take it and Equip it.
+        ");
+        
+        Weapons SlingShot = new Weapons("SlingShot", 30);
+        player.EquippedWeapon = SlingShot;
 
         Console.WriteLine
         (@"
@@ -265,6 +293,10 @@ public class Program
         ");
   
         System.Console.WriteLine(player.CurrentLocation);
+        System.Console.WriteLine(player.Name);
+        System.Console.WriteLine(player.Health);
+        System.Console.WriteLine(player.Strength);
+        System.Console.WriteLine(player.Medkit);
         // Enemy enemy1 = Enemy.GetEnemy("S");
         // System.Console.WriteLine(enemy1.NameEnemy);
         // Enemy enemy2 = Enemy.GetEnemy(2);
@@ -296,7 +328,7 @@ public class Program
 
         while (player.CurrentLocation.Name != "Goal")
         {
-            Console.WriteLine("Current sector: " + player.CurrentLocation.Sector);
+            Console.WriteLine("Current sector: " + player.CurrentLocation.Name);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
@@ -312,40 +344,48 @@ public class Program
             {
                 System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
             }
+            
             if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("You have opened the gate to sector 2. ");
             }
 
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && !check_grieverfight)
+
+
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight)
+
             {
-                System.Console.WriteLine("\nYou can't move to sector 2 yet\n");
+                System.Console.WriteLine("You can't move to this sector yet");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 3" && check_boltcutter)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && check_boltcutter)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-                System.Console.WriteLine(@"you are standing infront of the gate to sector 3. There is a very big padlock locking the gate
-Lucky you just found a big boltcutter. ");
+                System.Console.WriteLine
+                (@"
+                you are standing infront of the gate to sector 3. There is a very big padlock locking the gate
+                Lucky you just found a big boltcutter. 
+                ");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 3" && !check_boltcutter)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && !check_boltcutter)
             {
-                System.Console.WriteLine("You can't move to Sector 3 yet");
+                System.Console.WriteLine("You can't move to this sector yet");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 4" && check_shovel)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && check_shovel)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("there is a wall between sector 3 and 4. You dig through it with your shovel. ");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 4" && !check_shovel)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && !check_shovel)
             {
-                System.Console.WriteLine("You can't move to Sector 4 yet");
+                System.Console.WriteLine("You can't move to this sector yet");
             }
             // sectors 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Boltcutter" && !check_boltcutter)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-                System.Console.WriteLine("You have found boltcutters! Maybe you need this for a big lock?");
+                Items Boltcutter = new Items("boltcutter");
                 check_boltcutter = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Riddle" && !check_riddle)
@@ -354,11 +394,11 @@ Lucky you just found a big boltcutter. ");
                 {
                     player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                     System.Console.WriteLine(@"There is a riddle written on the wall. It reads:
-I am a path with walls on each side, 
-Twists and turns where you must decide. 
-Dead ends and choices to make, 
-Navigate wisely, don't make a mistake.
-What am I?
+                    I am a path with walls on each side, 
+                    Twists and turns where you must decide. 
+                    Dead ends and choices to make, 
+                    Navigate wisely, don't make a mistake.
+                    What am I?
                     ");
                     string riddleAwnser = Console.ReadLine().ToUpper();
 
@@ -380,7 +420,7 @@ What am I?
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
-Acquires Assault Rifle!");
+                Acquires Assault Rifle!");
                 player.EquippedWeapon = new Weapons("Assault Rifle", 250);
             }     
 
@@ -422,7 +462,7 @@ Acquires Assault Rifle!");
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
-You take it because he does not need it anymore. ");
+                You take it because he does not need it anymore. ");
 
                 player.EquippedWeapon = new Weapons("StunGun", 50);
 
@@ -432,8 +472,8 @@ You take it because he does not need it anymore. ");
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
-You wonder and ponder how it ended up there before you pick it up...
-Handgun acquired!");
+                You wonder and ponder how it ended up there before you pick it up...
+                Handgun acquired!");
                 player.EquippedWeapon = new Weapons("Handgun", 100);
             }
 
@@ -451,55 +491,9 @@ Handgun acquired!");
                 player.PickUpBandaid(1);
             }
 
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Goal")
-            {
-                System.Console.WriteLine("There seems to be a keypad. It asks you to enter a code. ");
-                System.Console.WriteLine("Enter code: ");
-                string code = Console.ReadLine().ToUpper();
-
-                if (code == "BADMAN")
-                {
-                    player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-                }
-                else
-                {
-                    System.Console.WriteLine("That awnser was wrong. You walk away dissapointed but hopeful. ");
-                }
-
-            }
-
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-            };
-            if (DayOrNight == "Night")
-            {
-                Random random = new Random();
-                int randint = random.Next(4);
-                if (randint == 1)
-                {
-                    Enemy enemy = Enemy.GetEnemy(player.CurrentLocation.Sector);
-                    player.Combat(player, enemy);
-                }
-            }
-            if (!player.IsAlive())
-            {
-                player.CurrentLocation.ID = 1;
-            }
-            if (time_count == 24)
-            {
-                time_count = 0;
-            }
-            else
-            {
-                time_count += 1;
-            }
-            DayOrNight = time_count switch
-            {
-                >= 0 and <= 6 => "Night",
-                >= 7 and <= 19 => "Day",
-                >= 20 and <= 24 => "Night",
-                _ => "Error"
             };
         }
 
