@@ -36,7 +36,7 @@ public class Player
 
     public void TakeDamage(int damage)
     {
-        Health =- damage;
+        Health -= damage;
     }
 
     public void HealthUpgrade(int AmountHealth)
@@ -68,12 +68,12 @@ public class Player
         System.Console.WriteLine("---------------------");
     }
 
-    public void ShowChoices(Weapons CurrentWeapon)
+    public void ShowChoices(Weapons CurrentWeapon, int time)
     {
         System.Console.WriteLine(@"1. Equip Weapon
-                                   2. Heal yourself
-                                   3. Show Items
-                                   4. Continue the Maze");
+2. Heal yourself
+3. Look at watch
+4. Continue the Maze");
 
         string choice = Console.ReadLine();
 
@@ -82,13 +82,19 @@ public class Player
             case "1":
                 CurrentWeapon.ShowWeapons();
                 break;
+                
             case "2":
                 ShowHealing();
+                break;
+
+            case "3":
+                System.Console.WriteLine($"The time is {time}:00. ");
                 break;
 
             default:
                 break;
         }
+
     }
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
@@ -127,13 +133,18 @@ public class Player
     {
         while (player.IsAlive() && enemy.IsAlive())
         {
-            int totalDamage = player.Strength + player.EquippedWeapon.damage;
+            int PlayerDamage = player.Strength + player.EquippedWeapon.damage;
+            enemy.TakeDamage(PlayerDamage);
 
-            enemy.TakeDamage(totalDamage);
+            Console.WriteLine($"Player attacks for {PlayerDamage} damage.");
+            Console.WriteLine($"Enemy health: {enemy.Health}");
 
             if (enemy.IsAlive())
             {
                 player.TakeDamage(enemy.Damage);
+
+                Console.WriteLine($"Enemy attacks for {enemy.Damage} damage.");
+                Console.WriteLine($"Players health: {player.Health}");
             }
         }
         if (player.IsAlive() && !enemy.IsAlive())

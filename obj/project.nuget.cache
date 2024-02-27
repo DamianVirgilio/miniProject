@@ -1,8 +1,23 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "HYcFqY3jA1LC7E9p367v+fpls2Flo5KrD7Pz0KB4t6HZIs1HABQVsxYCRUZH1udHXqETNCQOjIUDoVNEuBgnlQ==",
   "success": true,
   "projectFilePath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
   "expectedPackageFiles": [],
   "logs": []
+=======
+  "dgSpecHash": "uDWVTxi8l5MSxRAR0D55B6/JduuZxUrnXl8R84j84fvJBk9+Nf68o6xFCCijmEqsqPPRPSn7SnwxbfTTGVrE5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
+>>>>>>> c75385f9812fa1bc5e12190f3fe1ad102384813f
 }

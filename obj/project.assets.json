@@ -8,11 +8,16 @@
     "net7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/Users/meesbreedveld/.nuget/packages/": {}
+=======
+    "C:\\Users\\Shara\\.nuget\\packages\\": {}
+>>>>>>> c75385f9812fa1bc5e12190f3fe1ad102384813f
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
       "projectName": "MiniProject",
       "projectPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/meesbreedveld/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
+      "projectName": "MiniProject",
+      "projectPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
+      "packagesPath": "C:\\Users\\Shara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Shara\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> c75385f9812fa1bc5e12190f3fe1ad102384813f
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,8 +74,20 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+>>>>>>> c75385f9812fa1bc5e12190f3fe1ad102384813f
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
