@@ -68,34 +68,59 @@ public class Player
         System.Console.WriteLine("---------------------");
     }
 
-    public void ShowChoices(Weapons CurrentWeapon, int time)
+    public void ShowChoices(Weapons CurrentWeapon, int time, bool watch)
     {
-        System.Console.WriteLine(@"1. Equip Weapon
+        if (watch)
+        {
+            System.Console.WriteLine(@"1. Equip Weapon
 2. Heal yourself
 3. Look at watch
 4. Continue the Maze");
 
-        string choice = Console.ReadLine();
+            string choice = Console.ReadLine();
 
-        switch (choice)
-        {
-            case "1":
-                CurrentWeapon.ShowWeapons();
-                break;
-                
-            case "2":
-                ShowHealing();
-                break;
+            switch (choice)
+            {
+                case "1":
+                    CurrentWeapon.ShowWeapons();
+                    break;
+                    
+                case "2":
+                    ShowHealing();
+                    break;
 
-            case "3":
-                System.Console.WriteLine($"The time is {time}:00. ");
-                break;
+                case "3":
+                    Watch(time);
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
+        else
+        {
+            System.Console.WriteLine(@"1. Equip Weapon
+    2. Heal yourself
+    3. Continue the Maze");
 
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    CurrentWeapon.ShowWeapons();
+                    break;
+                    
+                case "2":
+                    ShowHealing();
+                    break;
+
+                default:
+                    break;
+            }        
+        }
     }
+
 
     public void HealPlayer(string choice)    // We moeten even bespreken hoe we kiezen uit een healthkit en een bandage
     {
@@ -156,4 +181,22 @@ public class Player
             Console.WriteLine("You have been defeated!");
         }
     }
+    public void Watch(int time)
+    {
+        if (time >= 0 && time <= 9)
+        {
+            System.Console.WriteLine("You look at your watch and see:\n");
+            System.Console.WriteLine("   -------");
+            System.Console.WriteLine($"  | 0{time}:00 |");
+            System.Console.WriteLine("   -------\n");
+        }
+        else
+        {
+            System.Console.WriteLine("You look at your watch and see:\n");
+            System.Console.WriteLine("   -------");
+            System.Console.WriteLine($"  | {time}:00 |");
+            System.Console.WriteLine("   -------\n");
+        }
+    }
+
 }

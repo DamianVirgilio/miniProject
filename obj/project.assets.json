@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Shara\\.nuget\\packages\\": {}
+    "/Users/meesbreedveld/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
+      "projectUniqueName": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
       "projectName": "MiniProject",
-      "projectPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
-      "packagesPath": "C:\\Users\\Shara\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\",
+      "projectPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
+      "packagesPath": "/Users/meesbreedveld/.nuget/packages/",
+      "outputPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Shara\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/meesbreedveld/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -68,7 +68,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
