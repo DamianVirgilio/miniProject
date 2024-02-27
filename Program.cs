@@ -233,7 +233,7 @@ public class Program
         You assure Chuck that you will find a way for all of you escape and hand him back his toy.
         You tell him that he will get the chance to give his toy to his parents himself.
         
-<<<<<<< HEAD
+
         By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
         The *CILINDER-LIKE-DEVICE starts beeping.
         They follow to where the beep STOPS.
@@ -271,9 +271,7 @@ public class Program
         ");
 
 
-=======
-        ");
->>>>>>> 18a1fbee3a79ad8c6f389ed92fba90c27b1ba2bf
+
         
         System.Console.WriteLine(player.CurrentLocation);
         System.Console.WriteLine(player.Name);
@@ -291,29 +289,26 @@ public class Program
         Enemy enemy5 = Enemy.GetEnemy(5);
         System.Console.WriteLine(enemy5.NameEnemy);
         int time_count = 12;
-        bool check_boltcutter = false;
+        bool check_boltcutter = false; // gedaan
         bool check_bandage = false;
         bool check_B = false;
         bool check_D = false;
         bool check_M = false;
         bool check_N = false;
-        bool check_riddle = false;
-        bool check_assaultriffle = false;
-        bool check_grieverfight = false;
-        bool check_stungun = false;
-        bool check_handgun = false;
-        bool check_shovel = false;
-        bool check_medkit = false;
+        bool check_riddle = false; // gedaan
+        bool check_assaultrifle = false; // gedaan
+        bool check_grieverfight = false; // gedaan soortvan
+        bool check_stungun = false; // gedaan
+        bool check_handgun = false; // gedaan
+        bool check_shovel = false; // gedaan
+        bool check_medkit = false; // gedaan
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current sector: " + player.CurrentLocation.Sector);
             Console.WriteLine(player.CurrentLocation.Compass());
             System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
             string LocationMove = System.Console.ReadLine().ToUpper();
-<<<<<<< HEAD
-            player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-            
-=======
+
             if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 2" && check_grieverfight)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
@@ -338,11 +333,85 @@ public class Program
             {
                 System.Console.WriteLine("You can't move to this sector yet");
             }
+            // sectors 
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Boltcutter" && !check_boltcutter)
+            {
+                items = new Items("boltcutter");
+                check_boltcutter = true;
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Riddle" && !check_riddle)
+            {
+                while (!check_riddle)
+                {
+                    System.Console.WriteLine(@"There is a riddle written on the wall. It reads:
+                    I am a path with walls on each side, 
+                    Twists and turns where you must decide. 
+                    Dead ends and choices to make, 
+                    Navigate wisely, don't make a mistake.
+                    What am I?
+                    ");
+                    string riddleAwnser = system.Console.ReadLine().ToUpper();
+
+                    if (riddleAwnser == "MAZE")
+                    {
+                        check_riddle = true;
+                        System.Console.WriteLine("You got it right!");
+                        System.Console.WriteLine("A small trapdoor opens and inside is a shovel! You may need this to get in another sector. ");
+                        check_shovel = true;
+
+                    }
+                    else
+                    {
+                        System.Console.WriteLine("That does not seem to be the awnser but the gods of the maze are kind enough to let you try again. ");
+                    }
+                }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Assault Rifle" && !check_assaultrifle)    
+            {
+                System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
+                Acquires Assault Rifle!");
+                player.equippedWeapon = new Weapons("Assault Rifle", 250);
+            }        
+            
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "GrieverFight" && !check_grieverfight)
+            {
+                //griever fight hier!!!!!!
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Stungun" && !check_stungun)
+            {
+                System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
+                You take it because he does not need it anymore. ");
+
+                player.equippedWeapon = new Weapons("StunGun", 50);
+
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Handgun" && !check_handgun)
+            {
+                System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
+                You wonder and ponder how it ended up there before you pick it up...
+                Handgun acquired!");
+                player.equippedWeapon = new Weapons("Handgun", 100);
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Medkit" && !check_medkit)
+            {
+                System.Console.WriteLine("You have found a medkit!");
+                player.PickUpMed(1);
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Bandage" && !check_bandage)
+            {
+                System.Console.WriteLine("You have found a  bandage!");
+                player.PickUpBandaid(1);
+            }
+
+            }
             else
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
             }
->>>>>>> 480371742861b9a5d84afcae6f3a042e7ea2f4dc
         };
         Console.WriteLine("You have arrived at the goal!");
     }
