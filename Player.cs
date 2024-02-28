@@ -10,6 +10,7 @@ public class Player
     public int level = 1;
     public Location CurrentLocation;
     public Weapons EquippedWeapon;
+    public List<Weapons> WeaponList = new List<Weapons>();
 
     public Player(string _name, Location currentLocation)
     {
@@ -68,21 +69,22 @@ public class Player
         System.Console.WriteLine("---------------------");
     }
 
-    public void ShowChoices(Weapons CurrentWeapon, int time, bool watch)
+    public void ShowChoices(List<string> password, int time, bool watch)
     {
         if (watch)
         {
-            System.Console.WriteLine(@"1. Equip Weapon
+            System.Console.WriteLine(@"1. Show Weapons
 2. Heal yourself
-3. Look at watch
-4. Continue the Maze");
+3. Show Collected Letters
+4. Look at watch
+5. Continue the Maze");
 
             string choice = Console.ReadLine();
 
             switch (choice)
             {
                 case "1":
-                    CurrentWeapon.ShowWeapons();
+                    ShowWeapons();
                     break;
                     
                 case "2":
@@ -90,6 +92,13 @@ public class Player
                     break;
 
                 case "3":
+                    foreach (string letter in password)
+                    {
+                        System.Console.WriteLine(letter);
+                    }
+                    break;
+
+                case "4":
                     Watch(time);
                     break;
 
@@ -99,26 +108,59 @@ public class Player
         }
         else
         {
-            System.Console.WriteLine(@"1. Equip Weapon
-    2. Heal yourself
-    3. Continue the Maze");
+            System.Console.WriteLine(@"1. Show Weapons
+2. Heal yourself
+3. Show collected Letters
+4. Continue the Maze");
 
             string choice = Console.ReadLine();
 
             switch (choice)
             {
                 case "1":
-                    CurrentWeapon.ShowWeapons();
+                    ShowWeapons();
                     break;
                     
                 case "2":
                     ShowHealing();
                     break;
 
+                case "3":
+                    System.Console.WriteLine("---------------------");
+                    foreach (string letter in password)
+                    {
+                        System.Console.WriteLine(letter);
+                    }
+                    System.Console.WriteLine("---------------------\n");
+                    break;
+
                 default:
                     break;
             }        
         }
+    }
+
+
+        public void ShowWeapons()
+        {
+            System.Console.WriteLine("---------------------");
+            if (WeaponList.Count > 0)
+            {
+                foreach (Weapons weapon in WeaponList)
+                {
+                    System.Console.WriteLine(weapon.WeaponName);
+                }
+            }
+            else
+            {
+                System.Console.WriteLine("You have no weapons. ");
+            }
+            System.Console.WriteLine("---------------------");
+        }
+
+    public void AddWeapons(Weapons _weapon)
+    {
+        WeaponList.Add(_weapon);
     }
 
 
@@ -199,4 +241,40 @@ public class Player
         }
     }
 
+        public int Home()
+    {
+        
+        System.Console.WriteLine
+        (@" 
+        Choose what you want to do in your base:
+        1. Sleep
+        2. Exit and Continue
+        ");
+
+        string playerinput = Console.ReadLine();
+
+        if (playerinput == "1")
+        {
+            Console.WriteLine
+            (@"
+            You are now back home safe luckily. 
+            You take some rest so you can go back in the maze the next day. 
+
+            ZZZzzZZZzzzzZZZzZzZzzzZ
+
+            You have woken up and feel rested!
+            Your HP is now full!
+            ");
+
+            Health = MaxHealth;
+
+            return 7
+        }
+        else if (playerinput == "2")
+        {
+            Console.WriteLine(" You chose to continue...");
+        }
+       
+        Health = MaxHealth;
+    }
 }

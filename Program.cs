@@ -30,8 +30,8 @@ public class Program
         ");
 
         Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
+        
 
-        World.Home();
 
         Console.WriteLine
         (@"
@@ -58,6 +58,8 @@ public class Program
         Console.WriteLine("What is your Name?");
         string Username = System.Console.ReadLine();
         Player player = new Player(Username, World.Locations[0]);
+        player.EquippedWeapon = WoodenSpear;
+        player.AddWeapons(player.EquippedWeapon);
 
         Console.WriteLine
         (@$"
@@ -79,19 +81,12 @@ public class Program
 
         You then head to the woods, but one of the Gladers; Ben SUDDENLY appears and JUMPS on you.
         He LOOKS SICK and JUMPS on you and attemps to CHOKE you!
-        ");
-
-        //[TRY TO BREATHE]
-        //[FIND AN OBJECT NEAR YOU TO SLAM BENS HEAD TO ESCAPE]
-
-        Console.WriteLine
-        (@"
-        After slamming [OBJECT] on his head you run and try to escape.
+        
+        You SEARCH AROUND with your hands and find a brick lying around.
+        You SLAM a BRICK on his head.
+        After slamming a BRICK on his head you run and try to escape.
         You RUN back to the Glade and get into a FIGHT with Ben!
         ");
-
-        //[HAND COMBAT, YOU VS BEN]
-        //[YOU GRAB YOUR SPEAR AND THROW IT STRAIGHT INTO BENS HEAD]
 
         Console.WriteLine
         (@"
@@ -119,165 +114,7 @@ public class Program
 
         You IMPULSIVELY slip inside  barelyg making it to the other side before the doors fully close.
         The two of you check on Alby who got stung.
-
-        The Grievers start wailing into the distance and the walls start to move.
-        Minho gets up to leave Alby behind but you insist on not leaving him.
-        The two of you traverse the maze while carrying Alby!
-
-        You notice vine on the walls so the two of you hoist Alby to hide him up in the vines.
-        
-        A GRIEVER JUMPS ON YOU!
-
-        You have 2 options:
-        1. Use Your Spear
-        2. Use Tactical Strategy
-        ");
-
-        player.EquippedWeapon = WoodenSpear;
-        
-        string SpearOrTacticalStrat = Console.ReadLine();
-        if (SpearOrTacticalStrat == "1")
-        {
-            Enemy enemy = Enemy.GetEnemy("Sector 1");
-            player.Combat(player, enemy);
-            
-        }
-        else if (SpearOrTacticalStrat == "2")
-        {
-            Console.WriteLine
-            (@"
-            You Started RUNNING while the Griever is coming after you!
-            You SEE an OPENING and JUMP through!
-            He STILL follows you while you run past a few WALLS CLOSING!
-            You squeeze through TWO of the CLOSING WALLS!
-            YOU BARELY GET OUT!
-            The Griever gets STUCK inside and gets KILLED!
-            ");
-        }
-
-        Console.WriteLine
-        (@"
-        While finding the exit of the Maze you find a slingshot.
-        You take it and Equip it.
-        ");
-        
-        Weapons SlingShot = new Weapons("SlingShot", 30);
-        player.EquippedWeapon = SlingShot;
-
-        Console.WriteLine
-        (@$"
-        The next day the Maze opens and to everyone's surprise they see the two of you carrying Alby back.
-        
-        Minho announces: '{Username} KILLLED A GRIEVER!'
-
-        All of you return to the Council Hall...
-        Gally Highlights: {Username} killing a Griever could spell trouble for the others.
-        No one knows what happens when you kill a griever.
-        Minho Announces that {Username} is now a RUNNER!
-
-        Suddenly they hear something moving outside:
-        *THE BOX* is being lifted up outside out of the normal schedule!
-
-        When they open it:
-        They see a young Woman with a note in her hand.
-        The Note says: 'SHE'S THE LAST ONE! EVER!'
-
-        Suddenly she WAKES up and GHASPS {Username} before passing out.
-
-        Newt asks you if you know her but you SAY that you don't.
-        The others get nervous with the idea of the box not returning anymore supplies.
-
-        You decide to gack to the Maze but you're stopped by Minho.
-        You point out that no one has ever captured or killed a griever before.
-        It would be in our best intrest to investigate the body.
-        ");
-
-        //[GO BACK INTO THE MAZE TO THE GRIEVERS BODY]
-
-        Console.WriteLine
-        (@"
-        You look at the Griever and pull out the Grievers LEG which then comes apart.
-        You find a *CILINDER-LIKE DEVICE* inside of it's leg.
-        The device has a little light which is 'RED', the NUMBER '4' and a LABEl: 'WCKD'.
-        ");
-
-        //[RETURN TO THE GLADE]
-        //[RETURN TO BASE OR EXPLORE MAZE]
-        //[EXPLORE ALL SECTORS (1-4)]
-
-        //[CONTINUE STORY AFTER EXPLORING ALL SECTORS]
-
-        Console.WriteLine
-        (@"
-        Minho and you look at the number on the *CILINDER-LIKE-DEVICE*
-        You take a look at the NUMBER: '4'.
-
-        The maze is devided into 4 SECTORS.
-        That could mean that the Griever probably came from sector 4.
-
-        Finally the girl wakes up but has climbed the watch tower and throws rocks at the Gladers.
-        You get her to stop.
-        You climb up the tower but when you reach the top you find her holding a knife.
-        You calm her down and she reveals that her name is Theresa.
-        You introduce yourself and she claims that she doesn't know you.
-
-        Later you mention to her that she came with *The Note*.
-        The Box hasn't lowered since.
-        She recalls being in the water, being watched over by people and a woman that mentions that *WCKD* is good.
-        You recall seeing the woman that said *WCKD* is good.
-        The two of you wonder why no one else has memories other than their names.
-        Theresa shows you 2 syringes that she found in her pocket with the label *WCKD*.
-
-        You get the idea of injecting Alby that is infected with *THE CHANGING* with one of these syringes.
-        You hold Alby down while theresa INJECTS him with one of the syringes.
-        He immediately loses conciousness.
-
-        The two of them head to *THE PIT*
-        You ask why gally HATES you.
-        He reveals that everything started falling apart as soon as you arrived.
-
-        Chuck comes up to you to talk to you about what it's like to live outside of the walls and if he will ever meet his parents.
-        He hands you a toy that he said he thinks came from his parents.
-        He wants you find his parents and give it to them.
-        You assure Chuck that you will find a way for all of you escape and hand him back his toy.
-        You tell him that he will get the chance to give his toy to his parents himself.
-
-
-        By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
-        The *CILINDER-LIKE-DEVICE starts beeping.
-        They follow to where the beep STOPS.
-        When they reach a dead end, the small light on the CILINDER-LIKE-DEVICE turns *GREEN*.
-        Suddenly the walls open a path.
-        At the end of the path a *RED* light scans them.
-        The light turns *GREEN* and they see a way to leave the maze.
-
-        Suddenly the WALLS start CLOSING.
-        Minho and you run back to The Glade.
-
-        When arriving in The Glade:
-        You see that the main walls stay open during the NIGHT.
-        Grievers start coming in and you GATHER everyone to escape.
-
-        Run back to SECTOR 4 with EVERYONE:
-        ");
-
-        //[RUN THROUGH THE MAZE TO SECTOR 4]
-
-        Console.WriteLine
-        (@"
-        Uppon arrival at SECTOR 4, you get greeted with a puzzle:
-        ");
-
-        //[END GAME PUZZLE]
-
-        Console.WriteLine
-        (@"
-        PUZZLE COMPLETED:
-        The DOORS OPEN and everyone ESCAPES.
-
-        The outisde world looks like an ABANDONED DESERT with BARRON SKYSCRAPERS.
-        An EMPTY world with NO ONE AROUND.
-        ");
+        ");      
 
         List<string> passwordList = new List<string>();
         int time_count = 7;
@@ -295,17 +132,20 @@ public class Program
         bool check_shovel = false; // gedaan
         bool check_medkit = false; // gedaan
         bool check_watch = false;
+        int homecheck = 0;
         string DayOrNight = "Day";
         bool 
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current sector: " + player.CurrentLocation.Name);
             Console.WriteLine(player.CurrentLocation.Compass());
-            System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
+            System.Console.WriteLine(@"Where do you want to go? (N/E/S/W)
+Or check Invetory (I)");
+
             string LocationMove = System.Console.ReadLine().ToUpper();
             if (LocationMove == "I")
             {
-                player.ShowChoices(player.EquippedWeapon, time_count, check_watch);
+                player.ShowChoices(passwordList, time_count, check_watch);
             }
 
             else if (LocationMove == "N" || LocationMove == "W" || LocationMove == "S" || LocationMove == "E")
@@ -316,16 +156,107 @@ public class Program
                 System.Console.WriteLine("The doors are closed you can't return home (watch out for grievers...)");
             }
 
-            if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight)
+            if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && check_grieverfight && homecheck >= 1)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("You have opened the gate to sector 2. ");
             }
 
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Home")
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                time_count = player.Home();
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight, !homecheck >= 1)
 
             {
                 System.Console.WriteLine("You can't move to this sector yet");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Home" && check_grieverfight, homecheck == 0)
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                homecheck += 1
+                Console.WriteLine
+                (@$"
+                The next day the Maze opens and to everyone's surprise they see the two of you carrying Alby back.
+                
+                Minho announces: '{Username} KILLLED A GRIEVER!'
+
+                All of you return to the Council Hall...
+                Gally Highlights: {Username} killing a Griever could spell trouble for the others.
+                No one knows what happens when you kill a griever.
+                Minho Announces that {Username} is now a RUNNER!
+
+                Suddenly they hear something moving outside:
+                *THE BOX* is being lifted up outside out of the normal schedule!
+
+                When they open it:
+                They see a young Woman with a note in her hand.
+                The Note says: 'SHE'S THE LAST ONE! EVER!'
+
+                Suddenly she WAKES up and GHASPS {Username} before passing out.
+
+                Newt asks you if you know her but you SAY that you don't.
+                The others get nervous with the idea of the box not returning anymore supplies.
+                ");
+            }
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Home" && check_grieverfight, homecheck == 1)
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                homecheck += 1
+                Console.WriteLine
+                (@"
+                Minho and you look at the number on the *CILINDER-LIKE-DEVICE*
+                You take a look at the NUMBER: '4'.
+
+                The maze is devided into 4 SECTORS.
+                That could mean that the Griever probably came from sector 4.
+
+                Finally the girl wakes up but has climbed the watch tower and throws rocks at the Gladers.
+                You get her to stop.
+                You climb up the tower but when you reach the top you find her holding a knife.
+                You calm her down and she reveals that her name is Theresa.
+                You introduce yourself and she claims that she doesn't know you.
+
+                Later you mention to her that she came with *The Note*.
+                The Box hasn't lowered since.
+                She recalls being in the water, being watched over by people and a woman that mentions that *WCKD* is good.
+                You recall seeing the woman that said *WCKD* is good.
+                The two of you wonder why no one else has memories other than their names.
+                Theresa shows you 2 syringes that she found in her pocket with the label *WCKD*.
+
+                You get the idea of injecting Alby that is infected with *THE CHANGING* with one of these syringes.
+                You hold Alby down while theresa INJECTS him with one of the syringes.
+                He immediately loses conciousness.
+
+                The two of them head to *THE PIT*
+                You ask why gally HATES you.
+                He reveals that everything started falling apart as soon as you arrived.
+
+                Chuck comes up to you to talk to you about what it's like to live outside of the walls and if he will ever meet his parents.
+                He hands you a toy that he said he thinks came from his parents.
+                He wants you find his parents and give it to them.
+                You assure Chuck that you will find a way for all of you escape and hand him back his toy.
+                You tell him that he will get the chance to give his toy to his parents himself.
+
+                By sunrise You amd Minho run back into the maze and see that *SECTOR 4* is open again eventhough it's not supposed to be.
+                The *CILINDER-LIKE-DEVICE starts beeping.
+                They follow to where the beep STOPS.
+                When they reach a dead end, the small light on the CILINDER-LIKE-DEVICE turns *GREEN*.
+                Suddenly the walls open a path.
+                At the end of the path a *RED* light scans them.
+                The light turns *GREEN* and they see a way to leave the maze.
+
+                Suddenly the WALLS start CLOSING.
+                Minho and you run back to The Glade.
+
+                When arriving in The Glade:
+                You see that the main walls stay open during the NIGHT.
+                Grievers start coming in and you GATHER everyone to escape.
+
+                Run back to SECTOR 4 with EVERYONE:
+                ")
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 3" && check_boltcutter)
             {
@@ -340,12 +271,12 @@ public class Program
             {
                 System.Console.WriteLine("You can't move to this sector yet");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && check_shovel)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && check_shovel, homecheck >= 2)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("there is a wall between sector 3 and 4. You dig through it with your shovel. ");
             }
-            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && !check_shovel)
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && !check_shovel, !homecheck >= 2)
             {
                 System.Console.WriteLine("You can't move to this sector yet");
             }
@@ -361,17 +292,16 @@ public class Program
                 while (!check_riddle)
                 {
                     player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-                    System.Console.WriteLine(@"There is a riddle written on the wall. It reads:
-                    I am a path with walls on each side, 
-                    Twists and turns where you must decide. 
-                    Dead ends and choices to make, 
-                    Navigate wisely, don't make a mistake.
-                    What am I?
-                    ");
+                    System.Console.WriteLine
+                    (@"
+There is a riddle written on the wall. It reads:
+I am a path with walls on each side, 
+Navigate wisely, don't make a mistake.
+What am I?
+");
                     string riddleAwnser = Console.ReadLine().ToUpper();
 
                     if (riddleAwnser == "MAZE")
-                    {
                         check_riddle = true;
                         System.Console.WriteLine("You got it right!");
                         System.Console.WriteLine("A small trapdoor opens and inside is a shovel! You may need this to get in another sector. ");
@@ -389,6 +319,8 @@ public class Program
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
                 Acquires Assault Rifle!");
                 player.EquippedWeapon = new Weapons("Assault Rifle", 250);
+                player.AddWeapons(player.EquippedWeapon);
+
                 check_assaultrifle = true;
             }     
 
@@ -423,6 +355,56 @@ public class Program
             
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "GrieverFight" && !check_grieverfight)
             {
+                Console.WriteLine
+                (@"
+                The Grievers start wailing into the distance and the walls start to move.
+                Minho gets up to leave Alby behind but you insist on not leaving him.
+                The two of you traverse the maze while carrying Alby!
+
+                You notice vine on the walls so the two of you hoist Alby to hide him up in the vines.
+                
+                A GRIEVER JUMPS ON YOU!
+
+                You have 2 options:
+                1. Use Your Spear
+                2. Use Tactical Strategy
+                ");
+
+                player.EquippedWeapon = WoodenSpear;
+                
+                string SpearOrTacticalStrat = Console.ReadLine();
+                if (SpearOrTacticalStrat == "1")
+                {
+                    Enemy enemy = Enemy.GetEnemy("Sector 1");
+                    player.Combat(player, enemy);
+                    
+                }
+                else if (SpearOrTacticalStrat == "2")
+                {
+                    Console.WriteLine
+                    (@"
+                    You Started RUNNING while the Griever is coming after you!
+                    You SEE an OPENING and JUMP through!
+                    He STILL follows you while you run past a few WALLS CLOSING!
+                    You squeeze through TWO of the CLOSING WALLS!
+                    YOU BARELY GET OUT!
+                    The Griever gets STUCK inside and gets KILLED!
+
+                    You look at the Griever and pull out the Grievers LEG which then comes apart.
+                    You find a *CILINDER-LIKE DEVICE* inside of it's leg.
+                    The device has a little light which is 'RED', the NUMBER '4' and a LABEl: 'WCKD'.
+                    ");
+                }
+
+                Console.WriteLine
+                (@"
+                While finding the exit of the Maze you find a slingshot.
+                You take it and Equip it.
+                ");
+                
+                Weapons SlingShot = new Weapons("SlingShot", 30);
+                player.EquippedWeapon = SlingShot;
+                
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 check_grieverfight = true;
             }
@@ -431,15 +413,16 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
-                You take it because he does not need it anymore. ");
+You take it because he does not need it anymore. ");
                 player.EquippedWeapon = new Weapons("StunGun", 50);
+                player.AddWeapons(player.EquippedWeapon);
                 check_stungun = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Watch" && !check_watch)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You see light reflecting of a metal object.
-You walk towards and see that it's a watch! You can now see the time in your inventory");
+                You walk towards and see that it's a watch! You can now see the time in your inventory");
                 check_watch = true;
             }
 
@@ -447,9 +430,11 @@ You walk towards and see that it's a watch! You can now see the time in your inv
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
-                You wonder and ponder how it ended up there before you pick it up...
-                Handgun acquired!");
+You wonder and ponder how it ended up there before you pick it up...
+Handgun acquired!");
                 player.EquippedWeapon = new Weapons("Handgun", 100);
+                player.AddWeapons(player.EquippedWeapon);
+
                 check_handgun = true;
             }
 
@@ -518,7 +503,15 @@ You walk towards and see that it's a watch! You can now see the time in your inv
                 System.Console.WriteLine("Invalid input");
             }
         }
-        System.Console.WriteLine("You have arrived at the goal!");
-}
-            }
+        Console.WriteLine
+        (@"
+        PUZZLE COMPLETED:
+        The DOORS OPEN and everyone ESCAPES.
+
+        The outisde world looks like an ABANDONED DESERT with BARRON SKYSCRAPERS.
+        An EMPTY world with NO ONE AROUND.
+        ");
+    }
+    
+            
  
