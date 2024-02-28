@@ -1,8 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "uDWVTxi8l5MSxRAR0D55B6/JduuZxUrnXl8R84j84fvJBk9+Nf68o6xFCCijmEqsqPPRPSn7SnwxbfTTGVrE5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
   "expectedPackageFiles": [],
+=======
+  "dgSpecHash": "xffoy8AEqrG/zI7VVgUpEFrBohPMMstOVtgRgIViLmVdDXuloihG3DM6QK5bJsRrUxw0TjcvwTHSSI/xYKGdGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\damia\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
+>>>>>>> d74d2d1072ed6d27df713e5ab393471b93bb3eeb
   "logs": []
 }

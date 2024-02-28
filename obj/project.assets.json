@@ -8,11 +8,16 @@
     "net7.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Shara\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\damia\\.nuget\\packages\\": {}
+>>>>>>> d74d2d1072ed6d27df713e5ab393471b93bb3eeb
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
       "projectName": "MiniProject",
       "projectPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
@@ -21,6 +26,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Shara\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj",
+      "projectName": "MiniProject",
+      "projectPath": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\MiniProject.csproj",
+      "packagesPath": "C:\\Users\\damia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\damia\\Documents\\School informatica\\miniProject\\miniProject\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\damia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> d74d2d1072ed6d27df713e5ab393471b93bb3eeb
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -54,12 +69,34 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+>>>>>>> d74d2d1072ed6d27df713e5ab393471b93bb3eeb
       }
     }
   }

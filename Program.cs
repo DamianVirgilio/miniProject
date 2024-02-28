@@ -30,8 +30,8 @@ public class Program
         ");
 
         Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
+        
 
-        World.Home();
 
         Console.WriteLine
         (@"
@@ -58,6 +58,8 @@ public class Program
         Console.WriteLine("What is your Name?");
         string Username = System.Console.ReadLine();
         Player player = new Player(Username, World.Locations[0]);
+        player.EquippedWeapon = WoodenSpear;
+        player.AddWeapons(player.EquippedWeapon);
 
         Console.WriteLine
         (@$"
@@ -136,11 +138,13 @@ public class Program
         {
             Console.WriteLine("Current sector: " + player.CurrentLocation.Name);
             Console.WriteLine(player.CurrentLocation.Compass());
-            System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
+            System.Console.WriteLine(@"Where do you want to go? (N/E/S/W)
+Or check Invetory (I)");
+
             string LocationMove = System.Console.ReadLine().ToUpper();
             if (LocationMove == "I")
             {
-                player.ShowChoices(player.EquippedWeapon, time_count, check_watch);
+                player.ShowChoices(passwordList, time_count, check_watch);
             }
 
             else if (LocationMove == "N" || LocationMove == "W" || LocationMove == "S" || LocationMove == "E")
@@ -156,10 +160,13 @@ public class Program
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("You have opened the gate to sector 2. ");
             }
-            else if (homecheck == 2)
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Home")
             {
-                
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                time_count = player.Home();
             }
+
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight, !homecheck >= 1)
 
             {
@@ -286,17 +293,14 @@ public class Program
                     player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                     System.Console.WriteLine
                     (@"
-                    There is a riddle written on the wall. It reads:
-                    I am a path with walls on each side, 
-                    Twists and turns where you must decide. 
-                    Dead ends and choices to make, 
-                    Navigate wisely, don't make a mistake.
-                    What am I?
-                    ");
+There is a riddle written on the wall. It reads:
+I am a path with walls on each side, 
+Navigate wisely, don't make a mistake.
+What am I?
+");
                     string riddleAwnser = Console.ReadLine().ToUpper();
 
                     if (riddleAwnser == "MAZE")
-                    {
                         check_riddle = true;
                         System.Console.WriteLine("You got it right!");
                         System.Console.WriteLine("A small trapdoor opens and inside is a shovel! You may need this to get in another sector. ");
@@ -314,6 +318,8 @@ public class Program
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
                 Acquires Assault Rifle!");
                 player.EquippedWeapon = new Weapons("Assault Rifle", 250);
+                player.AddWeapons(player.EquippedWeapon);
+
                 check_assaultrifle = true;
             }     
 
@@ -406,8 +412,9 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
-                You take it because he does not need it anymore. ");
+You take it because he does not need it anymore. ");
                 player.EquippedWeapon = new Weapons("StunGun", 50);
+                player.AddWeapons(player.EquippedWeapon);
                 check_stungun = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Watch" && !check_watch)
@@ -422,9 +429,11 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
-                You wonder and ponder how it ended up there before you pick it up...
-                Handgun acquired!");
+You wonder and ponder how it ended up there before you pick it up...
+Handgun acquired!");
                 player.EquippedWeapon = new Weapons("Handgun", 100);
+                player.AddWeapons(player.EquippedWeapon);
+
                 check_handgun = true;
             }
 
@@ -501,6 +510,7 @@ public class Program
         The outisde world looks like an ABANDONED DESERT with BARRON SKYSCRAPERS.
         An EMPTY world with NO ONE AROUND.
         ");
-}
-            }
+    }
+    
+            
  
