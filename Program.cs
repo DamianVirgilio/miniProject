@@ -278,22 +278,6 @@ public class Program
         The outisde world looks like an ABANDONED DESERT with BARRON SKYSCRAPERS.
         An EMPTY world with NO ONE AROUND.
         ");
-  
-        System.Console.WriteLine(player.CurrentLocation);
-        System.Console.WriteLine(player.Name);
-        System.Console.WriteLine(player.Health);
-        System.Console.WriteLine(player.Strength);
-        System.Console.WriteLine(player.Medkit);
-        // Enemy enemy1 = Enemy.GetEnemy("S");
-        // System.Console.WriteLine(enemy1.NameEnemy);
-        // Enemy enemy2 = Enemy.GetEnemy(2);
-        // System.Console.WriteLine(enemy2.NameEnemy);
-        // Enemy enemy3 = Enemy.GetEnemy(3);
-        // System.Console.WriteLine(enemy3.NameEnemy);
-        // Enemy enemy4 = Enemy.GetEnemy(4);
-        // System.Console.WriteLine(enemy4.NameEnemy);
-        // Enemy enemy5 = Enemy.GetEnemy(5);
-        // System.Console.WriteLine(enemy5.NameEnemy);
 
         List<string> passwordList = new List<string>();
         int time_count = 7;
