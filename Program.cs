@@ -31,7 +31,6 @@ public class Program
 
         Weapons WoodenSpear = new Weapons("WoodenSpear", 10);
 
-        World.Home();
 
         Console.WriteLine
         (@"
@@ -134,6 +133,8 @@ public class Program
         ");
 
         player.EquippedWeapon = WoodenSpear;
+        player.AddWeapons(player.EquippedWeapon);
+
         
         string SpearOrTacticalStrat = Console.ReadLine();
         if (SpearOrTacticalStrat == "1")
@@ -163,6 +164,8 @@ public class Program
         
         Weapons SlingShot = new Weapons("SlingShot", 30);
         player.EquippedWeapon = SlingShot;
+        player.AddWeapons(player.EquippedWeapon);
+
 
         Console.WriteLine
         (@$"
@@ -316,11 +319,13 @@ public class Program
         {
             Console.WriteLine("Current sector: " + player.CurrentLocation.Name);
             Console.WriteLine(player.CurrentLocation.Compass());
-            System.Console.WriteLine("Where do you want to go? (N/E/S/W)");
+            System.Console.WriteLine(@"Where do you want to go? (N/E/S/W)
+Or check Invetory (I)");
+
             string LocationMove = System.Console.ReadLine().ToUpper();
             if (LocationMove == "I")
             {
-                player.ShowChoices(player.EquippedWeapon, time_count, check_watch);
+                player.ShowChoices(passwordList, time_count, check_watch);
             }
 
             else if (LocationMove == "N" || LocationMove == "W" || LocationMove == "S" || LocationMove == "E")
@@ -335,6 +340,12 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine("You have opened the gate to sector 2. ");
+            }
+
+            else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Home")
+            {
+                player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
+                time_count = player.Home();
             }
 
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Gate 2" && !check_grieverfight)
@@ -355,6 +366,7 @@ public class Program
             {
                 System.Console.WriteLine("You can't move to this sector yet");
             }
+
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Sector == "Sector 4" && check_shovel)
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
@@ -376,12 +388,13 @@ public class Program
                 while (!check_riddle)
                 {
                     player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
-                    System.Console.WriteLine(@"There is a riddle written on the wall. It reads:
-                    I am a path with walls on each side, 
-                    Twists and turns where you must decide. 
-                    Dead ends and choices to make, 
-                    Navigate wisely, don't make a mistake.
-                    What am I?
+                    System.Console.WriteLine(@"
+There is a riddle written on the wall. It reads:
+I am a path with walls on each side, 
+Twists and turns where you must decide. 
+Dead ends and choices to make, 
+Navigate wisely, don't make a mistake.
+What am I?
                     ");
                     string riddleAwnser = Console.ReadLine().ToUpper();
 
@@ -404,6 +417,8 @@ public class Program
                 System.Console.WriteLine(@"You find an Assault rifle on the ground. You wonder who left it there.... 
                 Acquires Assault Rifle!");
                 player.EquippedWeapon = new Weapons("Assault Rifle", 250);
+                player.AddWeapons(player.EquippedWeapon);
+
                 check_assaultrifle = true;
             }     
 
@@ -446,8 +461,9 @@ public class Program
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You see a dead body... but he is holding a stungun!
-                You take it because he does not need it anymore. ");
+You take it because he does not need it anymore. ");
                 player.EquippedWeapon = new Weapons("StunGun", 50);
+                player.AddWeapons(player.EquippedWeapon);
                 check_stungun = true;
             }
             else if (player.CurrentLocation.GetLocationAt(LocationMove).Name == "Watch" && !check_watch)
@@ -462,9 +478,11 @@ You walk towards and see that it's a watch! You can now see the time in your inv
             {
                 player.TryMoveTo(player.CurrentLocation.GetLocationAt(LocationMove));
                 System.Console.WriteLine(@"You find a dead griever and see a Handgun in its stomach. 
-                You wonder and ponder how it ended up there before you pick it up...
-                Handgun acquired!");
+You wonder and ponder how it ended up there before you pick it up...
+Handgun acquired!");
                 player.EquippedWeapon = new Weapons("Handgun", 100);
+                player.AddWeapons(player.EquippedWeapon);
+
                 check_handgun = true;
             }
 

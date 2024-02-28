@@ -37,3 +37,18 @@ C:/Users/Shara/OneDrive/Documents/Git/miniProject/obj/Debug/net7.0/MiniProject.c
 C:/Users/Shara/OneDrive/Documents/Git/miniProject/obj/Debug/net7.0/MiniProject.dll
 C:/Users/Shara/OneDrive/Documents/Git/miniProject/obj/Debug/net7.0/refint/MiniProject.dll
 C:/Users/Shara/OneDrive/Documents/Git/miniProject/obj/Debug/net7.0/MiniProject.pdb
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.AssemblyInfoInputs.cache
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.AssemblyInfo.cs
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.csproj.CoreCompileInputs.cache
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.sourcelink.json
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.dll
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\refint\MiniProject.dll
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.pdb
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.exe
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.deps.json
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.runtimeconfig.json
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.dll
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\bin\Debug\net7.0\MiniProject.pdb
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\MiniProject.genruntimeconfig.cache
+C:\Users\damia\Documents\School informatica\miniProject\miniProject\obj\Debug\net7.0\ref\MiniProject.dll
