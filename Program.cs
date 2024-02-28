@@ -296,6 +296,7 @@ public class Program
         bool check_medkit = false; // gedaan
         bool check_watch = false;
         string DayOrNight = "Day";
+        bool 
         while (player.CurrentLocation.Name != "Goal")
         {
             Console.WriteLine("Current sector: " + player.CurrentLocation.Name);
