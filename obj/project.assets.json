@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/Users/meesbreedveld/.nuget/packages/": {}
+    "C:\\Users\\Shara\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
+      "projectUniqueName": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
       "projectName": "MiniProject",
-      "projectPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/MiniProject.csproj",
-      "packagesPath": "/Users/meesbreedveld/.nuget/packages/",
-      "outputPath": "/Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/",
+      "projectPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\MiniProject.csproj",
+      "packagesPath": "C:\\Users\\Shara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Shara\\OneDrive\\Documents\\Git\\miniProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/meesbreedveld/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Shara\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,16 +59,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/meesbreedveld/Desktop/C# semester 2/mini project w1-3/miniProject/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
